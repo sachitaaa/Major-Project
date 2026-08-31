@@ -1,0 +1,1526 @@
+
+\documentclass[9pt]{article}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\hypersetup{colorlinks=true, linkcolor=blue}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{Question Difficulty Validation Report}}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{}
+
+\titleformat{\section}{\small\bfseries}{}{0em}{}
+\setlist[enumerate]{label=\alph.), leftmargin=*, itemsep=0pt, topsep=0pt, parsep=0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+
+\begin{document}
+\begin{center}
+{\Large \textbf{Question Difficulty Validation Report}} \\[4pt]
+{\small \# of Questions: 68} \\[4pt]
+\noindent\rule{\linewidth}{0.4pt}
+\end{center}
+\vspace{0.3cm}
+
+\section*{Question 1}
+
+\textbf{Q:} Why is the information gain measure considered biased when evaluating categorical attributes with many distinct values?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) It underestimates the predictive power of attributes with few values.
+    \item \textbf{B) It favors attributes that split the data into many small groups.} % CORRECT
+    \item C) It assigns equal importance to all attribute values regardless of frequency.
+    \item D) It ignores the hierarchical relationships among attribute values.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.638s \hspace{1em} Tokens: 592 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 2}
+
+\textbf{Q:} What mechanism does the gain ratio use to mitigate the bias of information gain toward attributes with many values?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) It normalizes information gain by the total number of records.
+    \item B) It multiplies information gain by the number of distinct attribute values.
+    \item \textbf{C) It divides information gain by the intrinsic information of the attribute.} % CORRECT
+    \item D) It replaces information gain with the correlation coefficient.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{C} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.647s \hspace{1em} Tokens: 506 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 3}
+
+\textbf{Q:} In attribute‑oriented induction, how does a concept hierarchy help in handling categorical attributes during generalization?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) It converts categorical values into numeric scores for clustering.
+    \item \textbf{B) It provides a predefined ladder of abstract levels to roll up specific categories.} % CORRECT
+    \item C) It merges all categories into a single “unknown” value to simplify analysis.
+    \item D) It eliminates the need for any threshold settings on categorical attributes.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.519s \hspace{1em} Tokens: 491 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 4}
+
+\textbf{Q:} What primary benefit do join indices provide when identifying subcubes that involve categorical dimensions in a star schema?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) They automatically compute aggregate measures for each dimension.
+    \item B) They store pre‑aggregated numeric summaries to speed up queries.
+    \item \textbf{C) They maintain direct links between dimension attribute values and fact rows, enabling fast subcube retrieval.} % CORRECT
+    \item D) They eliminate the need for foreign key constraints between tables.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{C} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.629s \hspace{1em} Tokens: 542 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 5}
+
+\textbf{Q:} In OLAP terminology, why is the function count() treated as a measure while other attributes (often categorical) are treated as dimensions?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item \textbf{A) Because count() always returns a numeric value that can be aggregated across dimensions.} % CORRECT
+    \item B) Because count() modifies the underlying categorical attribute values.
+    \item C) Because dimensions cannot be used in any aggregation functions.
+    \item D) Because measures are required to be non‑numeric for categorical analysis.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{A} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.296s \hspace{1em} Tokens: 282 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 6}
+
+\textbf{Q:} How does reducing an attribute’s threshold influence the generalization of a categorical attribute in attribute‑oriented induction?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item \textbf{A) It causes the algorithm to roll up the attribute to a higher (more abstract) level in its hierarchy.} % CORRECT
+    \item B) It forces the attribute to be treated as a numeric measure instead of a dimension.
+    \item C) It eliminates the attribute from the working relation entirely.
+    \item D) It increases the number of distinct values retained, preventing any generalization.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{A} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.989s \hspace{1em} Tokens: 899 \\
+\textbf{Empirical:} & \textbf{Hard} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 7}
+
+\textbf{Q:} Why might different attribute relevance assessment methods yield varying rankings for categorical attributes?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item \textbf{A) Because each method uses a distinct bias, such as favoring many‑valued attributes or accounting for value probabilities.} % CORRECT
+    \item B) Because categorical attributes cannot be measured statistically.
+    \item C) Because all methods treat categorical attributes identically, leading to identical rankings.
+    \item D) Because relevance assessment only applies to numeric attributes.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{A} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.382s \hspace{1em} Tokens: 331 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 8}
+
+\textbf{Q:} When scanning a relation to collect statistics for categorical attributes, which factor mainly determines the cost of computing mapping pairs (v, v′) for each attribute?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) The total number of rows in the fact table.
+    \item \textbf{B) The number of distinct values the categorical attribute possesses.} % CORRECT
+    \item C) The depth of the attribute’s concept hierarchy.
+    \item D) Whether the attribute is defined as a primary key.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.678s \hspace{1em} Tokens: 613 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 9}
+
+\textbf{Q:} How does a foreign‑key relationship support the handling of categorical attributes in join indexing across multiple dimensions?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) It ensures that every categorical value appears in all dimension tables.
+    \item \textbf{B) It provides the link between a fact table’s foreign key and a dimension table’s primary key, enabling efficient joins on categorical attributes.} % CORRECT
+    \item C) It automatically aggregates categorical attributes into numeric measures.
+    \item D) It eliminates the need for concept hierarchies when generalizing categorical data.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.418s \hspace{1em} Tokens: 290 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 10}
+
+\textbf{Q:} In attribute‑oriented induction, what effect does setting a high attribute generalization threshold have on a categorical attribute?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) It forces the attribute to be generalized to the most abstract level immediately.
+    \item \textbf{B) It restricts the amount of generalization, keeping the attribute at a more detailed level.} % CORRECT
+    \item C) It converts the categorical attribute into a numeric one.
+    \item D) It removes the attribute from consideration in the mining process.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.642s \hspace{1em} Tokens: 530 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 11}
+
+\textbf{Q:} How does attribute‑oriented induction potentially limit the usefulness of accuracy as a performance metric?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) It requires scanning the relation multiple times, increasing error.
+    \item \textbf{B) Automatic generalization may hide detailed patterns, reducing the classifier’s ability to capture subtle differences.} % CORRECT
+    \item C) It forces the use of chi‑square tests for nominal data.
+    \item D) It guarantees perfect accuracy by removing noisy attributes.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.566s \hspace{1em} Tokens: 401 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 12}
+
+\textbf{Q:} What core assumption do clustering‑based outlier detection methods make about normal data versus outliers?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item \textbf{A) Normal data belong to large and dense clusters, while outliers belong to small or sparse clusters or to no cluster.} % CORRECT
+    \item B) Normal data are uniformly distributed, and outliers form a single dense cluster.
+    \item C) Normal data have higher variance than outliers.
+    \item D) Normal data are always located near the centroid of the dataset.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{A} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.602s \hspace{1em} Tokens: 544 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 13}
+
+\textbf{Q:} Why is determining whether a new object is an outlier typically fast after clustering has been performed?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Because each object is compared only to the centroids of a few clusters rather than to all individual data points.
+    \item B) Because outlier detection uses a pre‑computed lookup table of all possible outliers.
+    \item \textbf{C) Because the number of clusters is usually small compared to the total number of objects, reducing the number of comparisons needed.} % CORRECT
+    \item D) Because outlier detection algorithms run in constant time regardless of dataset size.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{C} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.783s \hspace{1em} Tokens: 640 \\
+\textbf{Empirical:} & \textbf{Hard} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 14}
+
+\textbf{Q:} How does the density measure used for outlier detection differ from the density measure used in density‑based clustering?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item \textbf{A) The outlier detection density focuses on the overall size of a cluster, while density‑based clustering considers local point density in a region.} % CORRECT
+    \item B) The outlier detection density evaluates only the distance to the nearest centroid, whereas density‑based clustering uses pairwise distances.
+    \item C) Both measures are identical; the text states there is no difference.
+    \item D) The outlier detection density is calculated after clustering, while density‑based clustering never uses density.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{A} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 1.143s \hspace{1em} Tokens: 1000 \\
+\textbf{Empirical:} & \textbf{Hard} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 15}
+
+\textbf{Q:} What is a potential limitation of using only cluster size as a criterion for outlier detection?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item \textbf{A) It may incorrectly label rare but legitimate sub‑populations as outliers.} % CORRECT
+    \item B) It requires computing the exact distance between every pair of points.
+    \item C) It cannot be applied to datasets with more than three dimensions.
+    \item D) It always leads to higher computational complexity than other methods.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{A} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.446s \hspace{1em} Tokens: 427 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 16}
+
+\textbf{Q:} Why does the small number of clusters relative to total objects contribute to efficiency in outlier detection?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item \textbf{A) Fewer clusters mean fewer distance calculations when assigning a new object to a cluster.} % CORRECT
+    \item B) A small number of clusters allows the use of hierarchical indexing structures.
+    \item C) It enables parallel processing of each cluster on separate CPUs.
+    \item D) It reduces the need for any similarity measures altogether.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{A} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.368s \hspace{1em} Tokens: 332 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 17}
+
+\textbf{Q:} What issue arises when cluster validation relies solely on the density measure discussed for outlier detection?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item \textbf{A) The measure may confuse genuinely sparse but valid clusters with outlier groups, leading to false positives.} % CORRECT
+    \item B) It forces all clusters to have the same number of points.
+    \item C) It eliminates the need for any further statistical testing.
+    \item D) It guarantees that all identified outliers are true anomalies.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{A} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.269s \hspace{1em} Tokens: 232 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 18}
+
+\textbf{Q:} Which of the following is NOT listed as an application of data mining in the provided material?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Constructing analytical models
+    \item B) Performing classification and prediction
+    \item \textbf{C) Generating real‑time transaction processing} % CORRECT
+    \item D) Discovering hidden patterns and associations
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{C} \hspace{1em} Bloom: Remember \hspace{1em} Comp: 0.596s \hspace{1em} Tokens: 496 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 19}
+
+\textbf{Q:} How does the context differentiate decision‑support data from data stored in operational databases?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Decision‑support data is raw, unclean, and lacks historic records.
+    \item \textbf{B) Decision‑support data is high‑quality, clean, integrated, and often historic, whereas operational databases contain detailed raw transactions.} % CORRECT
+    \item C) Operational databases contain aggregated summaries, while decision‑support data holds individual transaction logs.
+    \item D) Both contain identical data; the difference lies only in the user interface.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.517s \hspace{1em} Tokens: 483 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 20}
+
+\textbf{Q:} In the three‑tier architecture described, which tier is associated with performing data mining activities?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Bottom tier – Data warehouse
+    \item B) Middle tier – OLAP server
+    \item \textbf{C) Top tier – Front‑end tools} % CORRECT
+    \item D) All tiers equally share data mining responsibilities
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{C} \hspace{1em} Bloom: Remember \hspace{1em} Comp: 0.464s \hspace{1em} Tokens: 405 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 21}
+
+\textbf{Q:} How do data/knowledge visualization tools interact with multidimensional data mining to improve analytical outcomes?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) They automatically correct errors in the raw data before mining.
+    \item \textbf{B) They provide facilities for drilling, pivoting, filtering, dicing, and slicing, thereby enhancing flexibility and power of mining results.} % CORRECT
+    \item C) They eliminate the need for any preprocessing steps.
+    \item D) They store the mined models in a separate repository without user interaction.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.297s \hspace{1em} Tokens: 233 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 22}
+
+\textbf{Q:} Which application of data mining is highlighted as enhancing flexibility by allowing analysts to drill, pivot, filter, dice, and slice on a data cube?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Text mining for sentiment analysis
+    \item \textbf{B) Multidimensional data mining} % CORRECT
+    \item C) Association rule mining in market baskets
+    \item D) Clustering of spatial data
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Remember \hspace{1em} Comp: 0.308s \hspace{1em} Tokens: 293 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 23}
+
+\textbf{Q:} How does the “refresh” function contribute to the KDD cycle in a data‑warehouse environment?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) It aggregates data for multidimensional analysis.
+    \item \textbf{B) It updates the warehouse with new or changed data from operational sources.} % CORRECT
+    \item C) It merges similar data from heterogeneous sources into a unified format.
+    \item D) It visualizes the results of classification models.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.539s \hspace{1em} Tokens: 460 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 24}
+
+\textbf{Q:} Which statement correctly explains why “information processing” is not considered data mining?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Information processing uses sophisticated pattern detection, whereas data mining does not.
+    \item \textbf{B) Information processing only retrieves directly stored or aggregate information, not hidden patterns.} % CORRECT
+    \item C) Information processing is limited to visualizing data cubes.
+    \item D) Information processing requires attribute‑oriented induction before any analysis.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.518s \hspace{1em} Tokens: 483 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 25}
+
+\textbf{Q:} Which of the following operations is NOT listed as a way multidimensional data mining can explore a data cube?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Drilling
+    \item B) Pivoting
+    \item \textbf{C) Clustering} % CORRECT
+    \item D) Slicing
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{C} \hspace{1em} Bloom: Remember \hspace{1em} Comp: 0.542s \hspace{1em} Tokens: 468 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 26}
+
+\textbf{Q:} Which activity is specifically mentioned as a prerequisite before performing attribute‑oriented induction?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Data cleaning
+    \item \textbf{B) Data focusing} % CORRECT
+    \item C) Data cube computation
+    \item D) Data visualization
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Remember \hspace{1em} Comp: 0.471s \hspace{1em} Tokens: 420 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 27}
+
+\textbf{Q:} Which statement best describes the role of OLAP in multidimensional data mining as presented?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) OLAP provides only storage for raw transaction logs.
+    \item \textbf{B) OLAP enables dynamic selection and swapping of data mining functions on a data cube.} % CORRECT
+    \item C) OLAP replaces the need for any data mining algorithms.
+    \item D) OLAP limits analysis to a single predefined query.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.618s \hspace{1em} Tokens: 566 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 28}
+
+\textbf{Q:} Which of the following best captures the overall purpose of data mining within the knowledge discovery process?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) To store operational data for daily transactions.
+    \item B) To generate aggregate reports using simple SQL queries.
+    \item \textbf{C) To uncover hidden patterns and construct models that transform data into actionable knowledge.} % CORRECT
+    \item D) To visualize existing information without altering it.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{C} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.576s \hspace{1em} Tokens: 455 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 29}
+
+\textbf{Q:} Which statement best describes a key difference between data mining and data warehousing in terms of data granularity?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Data mining always works on highly summarized data, while data warehousing stores raw transaction details.
+    \item \textbf{B) Data mining may analyze data at more detailed granularities than the summarized data stored in a data warehouse.} % CORRECT
+    \item C) Data warehousing performs pattern discovery, whereas data mining only stores data.
+    \item D) Data mining and data warehousing always use the same level of data detail.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.706s \hspace{1em} Tokens: 654 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 30}
+
+\textbf{Q:} Which of the following is NOT listed as a back‑end tool or utility for populating and refreshing a data warehouse?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Data extraction
+    \item B) Data cleaning
+    \item \textbf{C) Data indexing} % CORRECT
+    \item D) Data transformation
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{C} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.601s \hspace{1em} Tokens: 499 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 31}
+
+\textbf{Q:} Which item would you expect to find in a data warehouse metadata repository?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Detailed transaction logs of the source systems
+    \item \textbf{B) Algorithms used for data summarization} % CORRECT
+    \item C) User passwords for warehouse access
+    \item D) Real‑time sensor data streams
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 1.079s \hspace{1em} Tokens: 1000 \\
+\textbf{Empirical:} & \textbf{Hard} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 32}
+
+\textbf{Q:} Considering the metadata repository of a data warehouse, which of the following statements accurately reflects its purpose?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) It stores only the raw source data before transformation.
+    \item \textbf{B) It provides details about warehouse structure, data history, summarization algorithms, and source‑to‑warehouse mappings.} % CORRECT
+    \item C) It records user login attempts and security breaches.
+    \item D) It contains the actual business transaction records.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.436s \hspace{1em} Tokens: 409 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 33}
+
+\textbf{Q:} Which statement correctly distinguishes the granularity of data that data mining can handle compared to that stored in a data warehouse?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Data mining only works with highly summarized data, while a data warehouse stores detailed transaction records.
+    \item \textbf{B) Data mining can analyze both detailed and summarized data, whereas a data warehouse typically stores summarized data for decision support.} % CORRECT
+    \item C) Data mining stores raw data, and a data warehouse performs the mining analysis.
+    \item D) Both data mining and data warehouses always operate on the same level of data detail.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.703s \hspace{1em} Tokens: 628 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 34}
+
+\textbf{Q:} Why are data warehouses considered valuable sources for data‑mining tools?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) They generate mining algorithms automatically.
+    \item \textbf{B) They provide integrated, consistent, and cleaned data after extensive preprocessing.} % CORRECT
+    \item C) They contain only raw transaction logs without any transformation.
+    \item D) They restrict access to only summary statistics, preventing detailed analysis.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Analyze \hspace{1em} Comp: 0.449s \hspace{1em} Tokens: 418 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 35}
+
+\textbf{Q:} Which characteristic differentiates a data warehouse from a traditional RDBMS/database?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Data warehouses are transaction‑oriented and frequently updated.
+    \item \textbf{B) Data warehouses are subject‑oriented, integrated, time‑variant, and non‑volatile.} % CORRECT
+    \item C) RDBMS stores only summarized data for decision making.
+    \item D) Data warehouses do not support any form of querying.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.567s \hspace{1em} Tokens: 495 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 36}
+
+\textbf{Q:} How does the metadata repository of a data warehouse support data‑mining activities?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) It stores the raw source files used for mining.
+    \item \textbf{B) It provides details about warehouse structure, data history, summarization algorithms, and source‑to‑warehouse mappings.} % CORRECT
+    \item C) It only tracks user login information.
+    \item D) It replaces the need for any data preprocessing before mining.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Analyze \hspace{1em} Comp: 0.218s \hspace{1em} Tokens: 191 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 37}
+
+\textbf{Q:} Which of the following data types is explicitly mentioned as being outside the typical scope of a data warehouse but within the scope of data mining?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Summarized sales totals per country.
+    \item \textbf{B) Flat files containing unstructured text.} % CORRECT
+    \item C) Relational tables with foreign keys.
+    \item D) Time‑variant summary tables.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.598s \hspace{1em} Tokens: 534 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 38}
+
+\textbf{Q:} In what way do ETL (Extraction, Transformation, Loading) processes influence the readiness of data for mining in a data warehouse?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) ETL processes delay mining by storing only raw data.
+    \item \textbf{B) They clean, integrate, and transform data, producing high‑quality, consistent datasets suitable for mining.} % CORRECT
+    \item C) ETL automatically discovers hidden patterns without further analysis.
+    \item D) They convert mined patterns back into operational databases.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Analyze \hspace{1em} Comp: 0.725s \hspace{1em} Tokens: 542 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 39}
+
+\textbf{Q:} Which of the following best explains why data normalization is applied before distance‑based mining algorithms?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) It reduces the number of attributes in the dataset.
+    \item \textbf{B) It scales all attribute values to a common range, preventing attributes with larger scales from dominating distance calculations.} % CORRECT
+    \item C) It converts categorical attributes into numeric ones.
+    \item D) It guarantees that all values become integers.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.550s \hspace{1em} Tokens: 501 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 40}
+
+\textbf{Q:} After applying min‑max normalization, what is the possible value range for any attribute?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) (−∞, +∞)
+    \item \textbf{B) (0, 1) inclusive} % CORRECT
+    \item C) (−1, 1) inclusive
+    \item D) (0, 10) inclusive
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.596s \hspace{1em} Tokens: 563 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 41}
+
+\textbf{Q:} Which interval correctly describes the theoretical range of values produced by z‑score normalization?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) (0, 1)
+    \item B) (−1, 1)
+    \item \textbf{C) (−∞, +∞)} % CORRECT
+    \item D) (0, 10)
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{C} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.613s \hspace{1em} Tokens: 570 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 42}
+
+\textbf{Q:} Which of the following best describes the primary motivation for performing data preprocessing as presented in the overview?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) To increase the size of the dataset for better mining results
+    \item \textbf{B) To improve data quality by addressing issues such as noise and inconsistency} % CORRECT
+    \item C) To replace relational databases with data warehouses
+    \item D) To eliminate the need for any further data analysis steps
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.422s \hspace{1em} Tokens: 382 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 43}
+
+\textbf{Q:} Which statement best captures the combined role of data sampling and dimensionality reduction in data reduction strategies?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Both techniques create a completely new dataset that discards the original information.
+    \item \textbf{B) Both aim to produce a smaller representation of the data while preserving the analytical usefulness of the original set.} % CORRECT
+    \item C) Sampling reduces attributes, whereas dimensionality reduction reduces the number of tuples.
+    \item D) Neither technique affects the size of the data; they only improve visualisation.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.617s \hspace{1em} Tokens: 500 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 44}
+
+\textbf{Q:} Which of the following best describes the difference between parametric and non‑parametric models used in numerosity reduction?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Parametric models require no assumptions about data distribution, while non‑parametric models do.
+    \item \textbf{B) Parametric models assume a specific functional form (e.g., regression), whereas non‑parametric models do not (e.g., histograms, clustering).} % CORRECT
+    \item C) Non‑parametric models always produce lossless compression, while parametric models are lossy.
+    \item D) Parametric models are only used for dimensionality reduction, not numerosity reduction.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.450s \hspace{1em} Tokens: 429 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 45}
+
+\textbf{Q:} If an attribute’s domain contains n distinct values, how many bits are required for each entry in its bitmap index?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) 1 bit
+    \item B) log₂ n bits
+    \item \textbf{C) n bits} % CORRECT
+    \item D) n² bits
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{C} \hspace{1em} Bloom: Remember \hspace{1em} Comp: 0.498s \hspace{1em} Tokens: 431 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 46}
+
+\textbf{Q:} Which of the following statements best defines a data warehouse?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) A volatile collection of operational data used for day‑to‑day transactions.
+    \item \textbf{B) A subject‑oriented, integrated, time‑variant, and non‑volatile data collection supporting management decision making.} % CORRECT
+    \item C) A repository that stores only raw, unprocessed data from source systems.
+    \item D) A tool that only provides front‑end query and reporting capabilities.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Remember \hspace{1em} Comp: 0.695s \hspace{1em} Tokens: 534 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 47}
+
+\textbf{Q:} Which of the following is NOT listed as a back‑end tool or utility used for populating and refreshing a data warehouse?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Data extraction
+    \item B) Data cleaning
+    \item C) Data transformation
+    \item \textbf{D) Data visualization} % CORRECT
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{D} \hspace{1em} Bloom: Remember \hspace{1em} Comp: 0.444s \hspace{1em} Tokens: 421 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 48}
+
+\textbf{Q:} Which of the following is **not** considered one of the four key characteristics of a data warehouse?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Subject‑oriented
+    \item B) Integrated
+    \item C) Time‑variant
+    \item \textbf{D) Volatile} % CORRECT
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{D} \hspace{1em} Bloom: Remember \hspace{1em} Comp: 0.488s \hspace{1em} Tokens: 426 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 49}
+
+\textbf{Q:} Why is normalizing data to a range such as [0.0, 1.0] important when applying a distance‑based anomaly detection algorithm?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) It reduces the dimensionality of the data, making clustering faster.
+    \item \textbf{B) It ensures that all attributes contribute equally to distance calculations, improving accuracy.} % CORRECT
+    \item C) It removes outliers before the algorithm runs, guaranteeing no false alarms.
+    \item D) It converts categorical attributes into numerical values suitable for distance metrics.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.707s \hspace{1em} Tokens: 516 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 50}
+
+\textbf{Q:} In a clustering‑based distance outlier detection method, what indicates that an object is likely an outlier?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) The object lies exactly at the centroid of its nearest cluster.
+    \item \textbf{B) The distance between the object and the nearest cluster’s centroid is larger than a predefined threshold.} % CORRECT
+    \item C) The object belongs to multiple clusters simultaneously.
+    \item D) The object has the smallest average distance to all other objects in the dataset.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.616s \hspace{1em} Tokens: 584 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 51}
+
+\textbf{Q:} Which of the following best describes the role of “distance to the closest cluster” in clustering‑based outlier detection?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) It is used to compute the silhouette score for cluster validation.
+    \item \textbf{B) It serves as a direct measure to decide whether an object deviates significantly from typical cluster patterns.} % CORRECT
+    \item C) It determines the number of clusters to be formed in the dataset.
+    \item D) It replaces the need for any data preprocessing such as normalization.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.429s \hspace{1em} Tokens: 408 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 52}
+
+\textbf{Q:} When clustering is used to generate a concept hierarchy, each cluster becomes what element of the hierarchy?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) A leaf node only
+    \item \textbf{B) A node of the concept hierarchy} % CORRECT
+    \item C) The root of the hierarchy exclusively
+    \item D) An isolated sub‑hierarchy
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.564s \hspace{1em} Tokens: 490 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 53}
+
+\textbf{Q:} Which approach starts with each data point as its own cluster and iteratively merges them?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Top‑down splitting
+    \item \textbf{B) Bottom‑up merging} % CORRECT
+    \item C) K‑means clustering
+    \item D) Divisive hierarchical clustering
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.579s \hspace{1em} Tokens: 549 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 54}
+
+\textbf{Q:} When data are “contaminated, with some values out of range or of a different data type than expected,” which phase of the data preprocessing pipeline is most appropriate to address this issue?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Data integration
+    \item \textbf{B) Data cleaning} % CORRECT
+    \item C) Data transformation
+    \item D) Data reduction
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.528s \hspace{1em} Tokens: 506 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 55}
+
+\textbf{Q:} Which of the following best explains why “ignoring the tuple” is a poor strategy when the missing values are limited to a few attributes rather than many?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item \textbf{A) It reduces the dataset size unnecessarily, losing valuable information.} % CORRECT
+    \item B) It violates the assumption of independence among attributes.
+    \item C) It increases computational complexity of subsequent mining tasks.
+    \item D) It introduces duplicate records into the dataset.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{A} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.470s \hspace{1em} Tokens: 449 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 56}
+
+\textbf{Q:} In a multidimensional data mining scenario, which of the following best describes the role of OLAP?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) It replaces the need for any data mining algorithms.
+    \item \textbf{B) It provides the exploratory interface that enables mining of knowledge from multidimensional databases.} % CORRECT
+    \item C) It stores only transactional (OLTP) data for fast updates.
+    \item D) It limits the analysis to two‑dimensional tabular views.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.664s \hspace{1em} Tokens: 560 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 57}
+
+\textbf{Q:} In the three‑tier data warehousing architecture, which tier is primarily responsible for executing OLAP operations such as roll‑up and drill‑down?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) The presentation tier (client).
+    \item \textbf{B) The middle tier (OLAP server).} % CORRECT
+    \item C) The bottom tier (data storage).
+    \item D) The integration tier (ETL processes).
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.584s \hspace{1em} Tokens: 544 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 58}
+
+\textbf{Q:} Which OLAP operation aggregates data by moving from a lower‑level member to a higher‑level member in a dimension hierarchy (e.g., from city to province/state)?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Drill‑down
+    \item \textbf{B) Roll‑up} % CORRECT
+    \item C) Slice
+    \item D) Pivot
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.511s \hspace{1em} Tokens: 420 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 59}
+
+\textbf{Q:} A query requests sales for the year 2010 across the dimensions \{brand, province/state\}. Which OLAP operation(s) should be applied first to restrict the data to the year 2010?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Drill‑down on year, then slice on brand
+    \item \textbf{B) Slice on year, then projection on brand and province/state} % CORRECT
+    \item C) Roll‑up on year, then dice on brand and province/state
+    \item D) Pivot on year, then roll‑up on brand
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Apply \hspace{1em} Comp: 0.772s \hspace{1em} Tokens: 707 \\
+\textbf{Empirical:} & \textbf{Hard} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 60}
+
+\textbf{Q:} Considering the three‑tier model, which layer is most likely to be refreshed periodically through ETL processes, and how does this differ from the refresh behavior of OLTP systems?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Top tier – refreshed continuously like OLTP.
+    \item B) Middle tier – refreshed only on demand, unlike OLTP’s real‑time updates.
+    \item C) Bottom tier – operational databases are refreshed via ETL, similar to OLTP.
+    \item \textbf{D) Bottom tier – data warehouse is refreshed periodically, whereas OLTP updates are immediate.} % CORRECT
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{D} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.744s \hspace{1em} Tokens: 691 \\
+\textbf{Empirical:} & \textbf{Hard} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 61}
+
+\textbf{Q:} Considering the data update frequency, which statement accurately reflects the difference between OLTP and OLAP environments?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) OLTP databases are refreshed nightly, while OLAP warehouses are updated in real time.
+    \item \textbf{B) OLTP systems handle continuous, real‑time updates; OLAP systems are refreshed periodically (e.g., nightly or weekly).} % CORRECT
+    \item C) Both OLTP and OLAP systems update data continuously at the same rate.
+    \item D) OLAP systems never receive new data after the initial load.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.522s \hspace{1em} Tokens: 433 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 62}
+
+\textbf{Q:} Which of the following best explains why OLAP systems typically require a different schema design (e.g., star or snowflake) compared to OLTP systems?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) OLAP schemas minimize redundancy to speed up transaction processing.
+    \item B) OLTP schemas are optimized for complex joins across many dimensions.
+    \item \textbf{C) OLAP schemas organize data around facts and dimensions to facilitate fast aggregation and slicing, unlike normalized OLTP schemas.} % CORRECT
+    \item D) Both OLTP and OLAP use identical normalized schemas, so there is no difference.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{C} \hspace{1em} Bloom: Analyze \hspace{1em} Comp: 0.674s \hspace{1em} Tokens: 559 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 63}
+
+\textbf{Q:} Which of the following best explains why the choice of a deviation measurement is critical for detecting global outliers?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Because the measurement determines the dimensionality of the data representation
+    \item \textbf{B) Because it directly influences how far a point must be from the majority to be flagged as an outlier} % CORRECT
+    \item C) Because it sets the threshold for the number of clusters the algorithm will create
+    \item D) Because it decides whether bitmap indexing can be applied efficiently
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.522s \hspace{1em} Tokens: 497 \\
+\textbf{Empirical:} & \textbf{Easy} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 64}
+
+\textbf{Q:} How does the text justify the need for “appropriate measurement of deviation” before applying outlier detection?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Because it determines whether bitmap indexing can be used
+    \item \textbf{B) Because different applications may define “outlier” differently, affecting detection performance} % CORRECT
+    \item C) Because it sets the number of clusters the algorithm must generate
+    \item D) Because it is required for constructing a correlation matrix among attributes
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.673s \hspace{1em} Tokens: 586 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 65}
+
+\textbf{Q:} Which approach is most suitable for detecting outliers in **multivariate data** by converting the problem to a univariate one?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) Applying a distance‑based proximity method directly to the multivariate space.
+    \item B) Using a clustering‑based method to form clusters and flag points outside any cluster.
+    \item \textbf{C) Transforming the multivariate data into a single attribute (e.g., via a statistical summary) and then applying a univariate outlier detector.} % CORRECT
+    \item D) Training a classification model with outlier labels on the original multivariate attributes.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{C} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.608s \hspace{1em} Tokens: 568 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 66}
+
+\textbf{Q:} Why is it important to include a contrasting measure such as count\% when presenting the final class comparison of discovered patterns?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) It reduces the computational cost of mining by limiting the number of rules.
+    \item \textbf{B) It provides a quantitative way to compare the prevalence of a pattern in the target class versus a contrasting class, highlighting its discriminative power.} % CORRECT
+    \item C) It eliminates the need for attribute relevance analysis.
+    \item D) It ensures that all attributes are treated equally in the final description.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.550s \hspace{1em} Tokens: 486 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 67}
+
+\textbf{Q:} How does the “count\%” contrasting measure assist a user in interpreting the interestingness of a rule?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) It shows the absolute number of instances covered by the rule in the whole database.
+    \item \textbf{B) It indicates the proportion of the target class covered relative to the contrasting class, highlighting the rule’s discriminative strength.} % CORRECT
+    \item C) It provides a ranking of attributes by their correlation values.
+    \item D) It replaces the need for confidence and support calculations.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.622s \hspace{1em} Tokens: 559 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+
+
+\section*{Question 68}
+
+\textbf{Q:} Why might a user sample the working relation W when scanning for distinct attribute values during generalization?
+
+\begin{enumerate}[label=\textbf{\alph{*})}, nosep]
+    \item A) To ensure that every possible value is captured for accurate pattern evaluation.
+    \item \textbf{B) To reduce computational effort while still obtaining a representative set of values for evaluating pattern interestingness.} % CORRECT
+    \item C) To eliminate the need for any statistical analysis later in the process.
+    \item D) To automatically generate contrasting measures for each attribute.
+
+\end{enumerate}
+
+\begin{tabular}{@{}l p{10.5cm}@{}}
+\textbf{Answer:} & \textbf{B} \hspace{1em} Bloom: Understand \hspace{1em} Comp: 0.591s \hspace{1em} Tokens: 541 \\
+\textbf{Empirical:} & \textbf{Medium} \hspace{1em} \textbf{Actual (Human):} \underline{\hspace{5cm}}
+\end{tabular}
+
+\vspace{0.2cm}
+\rule{\textwidth}{0.4pt}
+\vspace{0.2cm}
+\end{document}

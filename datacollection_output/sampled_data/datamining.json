@@ -1,0 +1,957 @@
+[
+    {
+      "question": "Why is the information gain measure considered biased when evaluating categorical attributes with many distinct values?",
+      "options": {
+        "A": "It underestimates the predictive power of attributes with few values.",
+        "B": "It favors attributes that split the data into many small groups.",
+        "C": "It assigns equal importance to all attribute values regardless of frequency.",
+        "D": "It ignores the hierarchical relationships among attribute values."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "Information gain tends to favor attributes that have many distinct values because they create many small partitions, leading to a bias toward such attributes. This issue is noted on [Page 42].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "What mechanism does the gain ratio use to mitigate the bias of information gain toward attributes with many values?",
+      "options": {
+        "A": "It normalizes information gain by the total number of records.",
+        "B": "It multiplies information gain by the number of distinct attribute values.",
+        "C": "It divides information gain by the intrinsic information of the attribute.",
+        "D": "It replaces information gain with the correlation coefficient."
+      },
+      "correct_answer": "C",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "Gain ratio addresses the bias by dividing the information gain by the intrinsic information (entropy) of the attribute, which reflects the distribution of its values. Discussed on [Page 42].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "In attribute‑oriented induction, how does a concept hierarchy help in handling categorical attributes during generalization?",
+      "options": {
+        "A": "It converts categorical values into numeric scores for clustering.",
+        "B": "It provides a predefined ladder of abstract levels to roll up specific categories.",
+        "C": "It merges all categories into a single “unknown” value to simplify analysis.",
+        "D": "It eliminates the need for any threshold settings on categorical attributes."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "A concept hierarchy defines successive abstraction levels for a categorical attribute, allowing the algorithm to roll up detailed categories to more general ones. See [Page 91].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "What primary benefit do join indices provide when identifying subcubes that involve categorical dimensions in a star schema?",
+      "options": {
+        "A": "They automatically compute aggregate measures for each dimension.",
+        "B": "They store pre‑aggregated numeric summaries to speed up queries.",
+        "C": "They maintain direct links between dimension attribute values and fact rows, enabling fast subcube retrieval.",
+        "D": "They eliminate the need for foreign key constraints between tables."
+      },
+      "correct_answer": "C",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "Join indices keep relationships between dimension attribute values (including categorical ones) and the corresponding fact rows, which helps locate subcubes of interest efficiently. Refer to [Page 80].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "In OLAP terminology, why is the function count() treated as a measure while other attributes (often categorical) are treated as dimensions?",
+      "options": {
+        "A": "Because count() always returns a numeric value that can be aggregated across dimensions.",
+        "B": "Because count() modifies the underlying categorical attribute values.",
+        "C": "Because dimensions cannot be used in any aggregation functions.",
+        "D": "Because measures are required to be non‑numeric for categorical analysis."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "Count() produces a numeric result that can be aggregated over dimensions, so it is classified as a measure, whereas other attributes, many of which are categorical, serve as dimensions. See [Page 90].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "How does reducing an attribute’s threshold influence the generalization of a categorical attribute in attribute‑oriented induction?",
+      "options": {
+        "A": "It causes the algorithm to roll up the attribute to a higher (more abstract) level in its hierarchy.",
+        "B": "It forces the attribute to be treated as a numeric measure instead of a dimension.",
+        "C": "It eliminates the attribute from the working relation entirely.",
+        "D": "It increases the number of distinct values retained, preventing any generalization."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "Lowering the threshold means the algorithm is allowed to generalize more, which corresponds to rolling up the categorical attribute along its concept hierarchy. Discussed on [Page 88].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Why might different attribute relevance assessment methods yield varying rankings for categorical attributes?",
+      "options": {
+        "A": "Because each method uses a distinct bias, such as favoring many‑valued attributes or accounting for value probabilities.",
+        "B": "Because categorical attributes cannot be measured statistically.",
+        "C": "Because all methods treat categorical attributes identically, leading to identical rankings.",
+        "D": "Because relevance assessment only applies to numeric attributes."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "Each relevance method (e.g., information gain, gain ratio) has its own bias; for instance, information gain is biased toward many‑valued attributes, while gain ratio adjusts for this, leading to different rankings. Refer to [Page 42].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "When scanning a relation to collect statistics for categorical attributes, which factor mainly determines the cost of computing mapping pairs (v, v′) for each attribute?",
+      "options": {
+        "A": "The total number of rows in the fact table.",
+        "B": "The number of distinct values the categorical attribute possesses.",
+        "C": "The depth of the attribute’s concept hierarchy.",
+        "D": "Whether the attribute is defined as a primary key."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "The cost depends on how many distinct values the categorical attribute has, as each distinct value must be examined to create mapping pairs. Mentioned on [Page 90].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "How does a foreign‑key relationship support the handling of categorical attributes in join indexing across multiple dimensions?",
+      "options": {
+        "A": "It ensures that every categorical value appears in all dimension tables.",
+        "B": "It provides the link between a fact table’s foreign key and a dimension table’s primary key, enabling efficient joins on categorical attributes.",
+        "C": "It automatically aggregates categorical attributes into numeric measures.",
+        "D": "It eliminates the need for concept hierarchies when generalizing categorical data."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "A foreign key in the fact table points to the primary key of a dimension table, allowing join indices to quickly associate categorical attribute values with fact rows. See [Page 79].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "In attribute‑oriented induction, what effect does setting a high attribute generalization threshold have on a categorical attribute?",
+      "options": {
+        "A": "It forces the attribute to be generalized to the most abstract level immediately.",
+        "B": "It restricts the amount of generalization, keeping the attribute at a more detailed level.",
+        "C": "It converts the categorical attribute into a numeric one.",
+        "D": "It removes the attribute from consideration in the mining process."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "A higher threshold limits how much the algorithm can generalize the attribute, preserving more detailed categorical values. Discussed on [Page 91].",
+      "source_pages": []
+    },
+    {
+      "question": "How does attribute‑oriented induction potentially limit the usefulness of accuracy as a performance metric?",
+      "options": {
+        "A": "It requires scanning the relation multiple times, increasing error.",
+        "B": "Automatic generalization may hide detailed patterns, reducing the classifier’s ability to capture subtle differences.",
+        "C": "It forces the use of chi‑square tests for nominal data.",
+        "D": "It guarantees perfect accuracy by removing noisy attributes."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "The context notes that attribute‑oriented induction “automatically generalizes data to a higher level” and cannot efficiently support deeper drill‑down, which can obscure details needed for accurate classification [Page 96].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "What core assumption do clustering‑based outlier detection methods make about normal data versus outliers?",
+      "options": {
+        "A": "Normal data belong to large and dense clusters, while outliers belong to small or sparse clusters or to no cluster.",
+        "B": "Normal data are uniformly distributed, and outliers form a single dense cluster.",
+        "C": "Normal data have higher variance than outliers.",
+        "D": "Normal data are always located near the centroid of the dataset."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "The text states that clustering‑based methods assume normal objects are in large, dense clusters, whereas outliers are in small, sparse clusters or unclustered. [Page 108]\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Why is determining whether a new object is an outlier typically fast after clustering has been performed?",
+      "options": {
+        "A": "Because each object is compared only to the centroids of a few clusters rather than to all individual data points.",
+        "B": "Because outlier detection uses a pre‑computed lookup table of all possible outliers.",
+        "C": "Because the number of clusters is usually small compared to the total number of objects, reducing the number of comparisons needed.",
+        "D": "Because outlier detection algorithms run in constant time regardless of dataset size."
+      },
+      "correct_answer": "C",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "After clustering, the number of clusters is much smaller than the total objects, so comparing an object to clusters is computationally inexpensive. [Page 126]\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "How does the density measure used for outlier detection differ from the density measure used in density‑based clustering?",
+      "options": {
+        "A": "The outlier detection density focuses on the overall size of a cluster, while density‑based clustering considers local point density in a region.",
+        "B": "The outlier detection density evaluates only the distance to the nearest centroid, whereas density‑based clustering uses pairwise distances.",
+        "C": "Both measures are identical; the text states there is no difference.",
+        "D": "The outlier detection density is calculated after clustering, while density‑based clustering never uses density."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "The passage notes a critical difference: the density concept for outlier detection emphasizes cluster size, whereas density‑based clustering uses local density of points. [Page 122]\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "What is a potential limitation of using only cluster size as a criterion for outlier detection?",
+      "options": {
+        "A": "It may incorrectly label rare but legitimate sub‑populations as outliers.",
+        "B": "It requires computing the exact distance between every pair of points.",
+        "C": "It cannot be applied to datasets with more than three dimensions.",
+        "D": "It always leads to higher computational complexity than other methods."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "While the text emphasizes small clusters as outliers, relying solely on size can misclassify genuine small clusters that represent rare but valid groups. This issue is implied by the discussion of assumptions about cluster size. [Page 108]\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Why does the small number of clusters relative to total objects contribute to efficiency in outlier detection?",
+      "options": {
+        "A": "Fewer clusters mean fewer distance calculations when assigning a new object to a cluster.",
+        "B": "A small number of clusters allows the use of hierarchical indexing structures.",
+        "C": "It enables parallel processing of each cluster on separate CPUs.",
+        "D": "It reduces the need for any similarity measures altogether."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "With fewer clusters, the system performs fewer comparisons, making the process fast. This is explicitly noted as an advantage of clustering‑based methods. [Page 126]\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "What issue arises when cluster validation relies solely on the density measure discussed for outlier detection?",
+      "options": {
+        "A": "The measure may confuse genuinely sparse but valid clusters with outlier groups, leading to false positives.",
+        "B": "It forces all clusters to have the same number of points.",
+        "C": "It eliminates the need for any further statistical testing.",
+        "D": "It guarantees that all identified outliers are true anomalies."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "The text highlights a critical difference between the density measure for outlier detection and that for density‑based clustering, suggesting that using this density alone can misclassify sparse legitimate clusters as outliers. [Page 122]",
+      "source_pages": []
+    },
+    {
+      "question": "Which of the following is NOT listed as an application of data mining in the provided material?",
+      "options": {
+        "A": "Constructing analytical models",
+        "B": "Performing classification and prediction",
+        "C": "Generating real‑time transaction processing",
+        "D": "Discovering hidden patterns and associations"
+      },
+      "correct_answer": "C",
+      "bloom_level": "Remember",
+      "difficulty": "Easy",
+      "explanation": "The context states that data mining supports knowledge discovery by finding hidden patterns, constructing analytical models, and performing classification and prediction, but it does not mention real‑time transaction processing as a data‑mining application [Page 72].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "How does the context differentiate decision‑support data from data stored in operational databases?",
+      "options": {
+        "A": "Decision‑support data is raw, unclean, and lacks historic records.",
+        "B": "Decision‑support data is high‑quality, clean, integrated, and often historic, whereas operational databases contain detailed raw transactions.",
+        "C": "Operational databases contain aggregated summaries, while decision‑support data holds individual transaction logs.",
+        "D": "Both contain identical data; the difference lies only in the user interface."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "Decision support requires consolidated, high‑quality, clean, integrated data, often historic, while operational databases hold detailed raw data that are not yet suitable for analysis [Page 48, 71].\n\n---",
+      "source_pages": []
+    },
+     {
+      "question": "In the three‑tier architecture described, which tier is associated with performing data mining activities?",
+      "options": {
+        "A": "Bottom tier – Data warehouse",
+        "B": "Middle tier – OLAP server",
+        "C": "Top tier – Front‑end tools",
+        "D": "All tiers equally share data mining responsibilities"
+      },
+      "correct_answer": "C",
+      "bloom_level": "Remember",
+      "difficulty": "Easy",
+      "explanation": "The textual description lists “Data mining” alongside “Query/report Analysis” under the top tier’s front‑end tools [Page 49].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "How do data/knowledge visualization tools interact with multidimensional data mining to improve analytical outcomes?",
+      "options": {
+        "A": "They automatically correct errors in the raw data before mining.",
+        "B": "They provide facilities for drilling, pivoting, filtering, dicing, and slicing, thereby enhancing flexibility and power of mining results.",
+        "C": "They eliminate the need for any preprocessing steps.",
+        "D": "They store the mined models in a separate repository without user interaction."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "The text notes that multidimensional data mining combined with visualization tools greatly enhances the power and flexibility of data mining by allowing operations such as drilling, pivoting, filtering, dicing, and slicing [Page 73].",
+      "source_pages": []
+    },
+    {
+      "question": "Which application of data mining is highlighted as enhancing flexibility by allowing analysts to drill, pivot, filter, dice, and slice on a data cube?",
+      "options": {
+        "A": "Text mining for sentiment analysis",
+        "B": "Multidimensional data mining",
+        "C": "Association rule mining in market baskets",
+        "D": "Clustering of spatial data"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Remember",
+      "difficulty": "Easy",
+      "explanation": "The context describes multidimensional data mining providing facilities for drilling, pivoting, filtering, dicing, and slicing on a data cube [Page 73].\n\n---",
+      "source_pages": []
+    },
+        {
+      "question": "How does the “refresh” function contribute to the KDD cycle in a data‑warehouse environment?",
+      "options": {
+        "A": "It aggregates data for multidimensional analysis.",
+        "B": "It updates the warehouse with new or changed data from operational sources.",
+        "C": "It merges similar data from heterogeneous sources into a unified format.",
+        "D": "It visualizes the results of classification models."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "Refresh is described as a function that updates the data warehouse, keeping it current with operational databases [Page 49].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which statement correctly explains why “information processing” is not considered data mining?",
+      "options": {
+        "A": "Information processing uses sophisticated pattern detection, whereas data mining does not.",
+        "B": "Information processing only retrieves directly stored or aggregate information, not hidden patterns.",
+        "C": "Information processing is limited to visualizing data cubes.",
+        "D": "Information processing requires attribute‑oriented induction before any analysis."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "The text notes that “answers to such queries… do not reflect sophisticated patterns or regularities buried in the database” and therefore “information processing, based on queries, … is not data mining.” [Page 72]\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which of the following operations is NOT listed as a way multidimensional data mining can explore a data cube?",
+      "options": {
+        "A": "Drilling",
+        "B": "Pivoting",
+        "C": "Clustering",
+        "D": "Slicing"
+      },
+      "correct_answer": "C",
+      "bloom_level": "Remember",
+      "difficulty": "Easy",
+      "explanation": "The passage mentions “drilling, pivoting, filtering, dicing, and slicing” but does not list clustering as a cube‑operation. [Page 73]\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which activity is specifically mentioned as a prerequisite before performing attribute‑oriented induction?",
+      "options": {
+        "A": "Data cleaning",
+        "B": "Data focusing",
+        "C": "Data cube computation",
+        "D": "Data visualization"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Remember",
+      "difficulty": "Easy",
+      "explanation": "The passage notes that “data focusing should be performed before attribute‑oriented induction” (Page 86).\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which statement best describes the role of OLAP in multidimensional data mining as presented?",
+      "options": {
+        "A": "OLAP provides only storage for raw transaction logs.",
+        "B": "OLAP enables dynamic selection and swapping of data mining functions on a data cube.",
+        "C": "OLAP replaces the need for any data mining algorithms.",
+        "D": "OLAP limits analysis to a single predefined query."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "The passage notes that by “integrating OLAP with various data mining functions, multidimensional data mining provides users with the flexibility to select desired data mining functions and swap data mining tasks dynamically” (Page 73).\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which of the following best captures the overall purpose of data mining within the knowledge discovery process?",
+      "options": {
+        "A": "To store operational data for daily transactions.",
+        "B": "To generate aggregate reports using simple SQL queries.",
+        "C": "To uncover hidden patterns and construct models that transform data into actionable knowledge.",
+        "D": "To visualize existing information without altering it."
+      },
+      "correct_answer": "C",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "The text directly links data mining to “support[ing] knowledge discovery by finding hidden patterns… constructing analytical models… and presenting the mining results” (Page 72).\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which statement best describes a key difference between data mining and data warehousing in terms of data granularity?",
+      "options": {
+        "A": "Data mining always works on highly summarized data, while data warehousing stores raw transaction details.",
+        "B": "Data mining may analyze data at more detailed granularities than the summarized data stored in a data warehouse.",
+        "C": "Data warehousing performs pattern discovery, whereas data mining only stores data.",
+        "D": "Data mining and data warehousing always use the same level of data detail."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "Data mining can work on finer‑grained data than the summarized forms typically kept in a warehouse, as noted on page 72.  \n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which of the following is NOT listed as a back‑end tool or utility for populating and refreshing a data warehouse?",
+      "options": {
+        "A": "Data extraction",
+        "B": "Data cleaning",
+        "C": "Data indexing",
+        "D": "Data transformation"
+      },
+      "correct_answer": "C",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "The context (page 96) mentions extraction, cleaning, transformation, loading, refreshing, and management, but does not mention indexing.  \n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which item would you expect to find in a data warehouse metadata repository?",
+      "options": {
+        "A": "Detailed transaction logs of the source systems",
+        "B": "Algorithms used for data summarization",
+        "C": "User passwords for warehouse access",
+        "D": "Real‑time sensor data streams"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "Page 96 describes metadata as including details such as the algorithms used for summarization and mappings from source data to warehouse form.  \n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Considering the metadata repository of a data warehouse, which of the following statements accurately reflects its purpose?",
+      "options": {
+        "A": "It stores only the raw source data before transformation.",
+        "B": "It provides details about warehouse structure, data history, summarization algorithms, and source‑to‑warehouse mappings.",
+        "C": "It records user login attempts and security breaches.",
+        "D": "It contains the actual business transaction records."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "Page 96 describes metadata as defining warehouse objects and providing details such as structure, history, algorithms, and mappings.",
+      "source_pages": []
+    },
+    {
+      "question": "Which statement correctly distinguishes the granularity of data that data mining can handle compared to that stored in a data warehouse?",
+      "options": {
+        "A": "Data mining only works with highly summarized data, while a data warehouse stores detailed transaction records.",
+        "B": "Data mining can analyze both detailed and summarized data, whereas a data warehouse typically stores summarized data for decision support.",
+        "C": "Data mining stores raw data, and a data warehouse performs the mining analysis.",
+        "D": "Both data mining and data warehouses always operate on the same level of data detail."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "Data mining may analyze data at more detailed granularities than the summarized data in a warehouse, which often stores aggregated information. [Page 72, 74]\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Why are data warehouses considered valuable sources for data‑mining tools?",
+      "options": {
+        "A": "They generate mining algorithms automatically.",
+        "B": "They provide integrated, consistent, and cleaned data after extensive preprocessing.",
+        "C": "They contain only raw transaction logs without any transformation.",
+        "D": "They restrict access to only summary statistics, preventing detailed analysis."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Analyze",
+      "difficulty": "Medium",
+      "explanation": "High‑quality data in warehouses result from costly cleaning, integration, and transformation, making them suitable for mining. [Page 73, 96]\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which characteristic differentiates a data warehouse from a traditional RDBMS/database?",
+      "options": {
+        "A": "Data warehouses are transaction‑oriented and frequently updated.",
+        "B": "Data warehouses are subject‑oriented, integrated, time‑variant, and non‑volatile.",
+        "C": "RDBMS stores only summarized data for decision making.",
+        "D": "Data warehouses do not support any form of querying."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "A data warehouse is defined as subject‑oriented, integrated, time‑variant, and non‑volatile, unlike operational databases. [Page 96]\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "How does the metadata repository of a data warehouse support data‑mining activities?",
+      "options": {
+        "A": "It stores the raw source files used for mining.",
+        "B": "It provides details about warehouse structure, data history, summarization algorithms, and source‑to‑warehouse mappings.",
+        "C": "It only tracks user login information.",
+        "D": "It replaces the need for any data preprocessing before mining."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Analyze",
+      "difficulty": "Medium",
+      "explanation": "Metadata includes warehouse objects, algorithms for summarization, and mappings, all of which help mining tools understand and use the data. [Page 96]\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which of the following data types is explicitly mentioned as being outside the typical scope of a data warehouse but within the scope of data mining?",
+      "options": {
+        "A": "Summarized sales totals per country.",
+        "B": "Flat files containing unstructured text.",
+        "C": "Relational tables with foreign keys.",
+        "D": "Time‑variant summary tables."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "Data mining research includes flat files, spatial, text, and multimedia data that are difficult to model in multidimensional warehouses. [Page 73, 72]\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "In what way do ETL (Extraction, Transformation, Loading) processes influence the readiness of data for mining in a data warehouse?",
+      "options": {
+        "A": "ETL processes delay mining by storing only raw data.",
+        "B": "They clean, integrate, and transform data, producing high‑quality, consistent datasets suitable for mining.",
+        "C": "ETL automatically discovers hidden patterns without further analysis.",
+        "D": "They convert mined patterns back into operational databases."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Analyze",
+      "difficulty": "Medium",
+      "explanation": "ETL tools handle data cleaning, integration, and transformation, which are essential preprocessing steps for effective data mining. [Page 96, 73]\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which of the following best explains why data normalization is applied before distance‑based mining algorithms?",
+      "options": {
+        "A": "It reduces the number of attributes in the dataset.",
+        "B": "It scales all attribute values to a common range, preventing attributes with larger scales from dominating distance calculations.",
+        "C": "It converts categorical attributes into numeric ones.",
+        "D": "It guarantees that all values become integers."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "Normalization scales data to a smaller common range (e.g., 0.0 to 1.0) which improves the accuracy and efficiency of algorithms that use distance measurements [Page 1].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "After applying min‑max normalization, what is the possible value range for any attribute?",
+      "options": {
+        "A": "(−∞, +∞)",
+        "B": "(0, 1) inclusive",
+        "C": "(−1, 1) inclusive",
+        "D": "(0, 10) inclusive"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "Min‑max normalization maps values to the interval 0.0 to 1.0 [Page 39].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which interval correctly describes the theoretical range of values produced by z‑score normalization?",
+      "options": {
+        "A": "(0, 1)",
+        "B": "(−1, 1)",
+        "C": "(−∞, +∞)",
+        "D": "(0, 10)"
+      },
+      "correct_answer": "C",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "Z‑score normalization yields standardized scores that can take any real value, positive or negative, depending on how far a datum lies from the mean [Page 39].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which of the following best describes the primary motivation for performing data preprocessing as presented in the overview?",
+      "options": {
+        "A": "To increase the size of the dataset for better mining results",
+        "B": "To improve data quality by addressing issues such as noise and inconsistency",
+        "C": "To replace relational databases with data warehouses",
+        "D": "To eliminate the need for any further data analysis steps"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "The overview highlights that data quality issues drive the need for preprocessing, aiming to produce high‑quality, clean data [Page 2].\n\n---",
+      "source_pages": []
+    },
+     {
+      "question": "Which statement best captures the combined role of data sampling and dimensionality reduction in data reduction strategies?",
+      "options": {
+        "A": "Both techniques create a completely new dataset that discards the original information.",
+        "B": "Both aim to produce a smaller representation of the data while preserving the analytical usefulness of the original set.",
+        "C": "Sampling reduces attributes, whereas dimensionality reduction reduces the number of tuples.",
+        "D": "Neither technique affects the size of the data; they only improve visualisation."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "Both sampling (a form of numerosity reduction) and dimensionality reduction are described as ways to obtain a reduced representation of the data that is much smaller in volume yet yields the same (or almost the same) analytical results. [Page 4, Page 26]  \n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which of the following best describes the difference between parametric and non‑parametric models used in numerosity reduction?",
+      "options": {
+        "A": "Parametric models require no assumptions about data distribution, while non‑parametric models do.",
+        "B": "Parametric models assume a specific functional form (e.g., regression), whereas non‑parametric models do not (e.g., histograms, clustering).",
+        "C": "Non‑parametric models always produce lossless compression, while parametric models are lossy.",
+        "D": "Parametric models are only used for dimensionality reduction, not numerosity reduction."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "The text lists regression and log‑linear models as parametric, and histograms, clusters, sampling, and aggregation as non‑parametric, reflecting the presence or absence of an assumed functional form. [Page 4]  \n\n---",
+      "source_pages": []
+    },
+     {
+      "question": "If an attribute’s domain contains n distinct values, how many bits are required for each entry in its bitmap index?",
+      "options": {
+        "A": "1 bit",
+        "B": "log₂ n bits",
+        "C": "n bits",
+        "D": "n² bits"
+      },
+      "correct_answer": "C",
+      "bloom_level": "Remember",
+      "difficulty": "Easy",
+      "explanation": "For a bitmap index, n bits are needed for each entry when the domain has n values [Page 78].\n\n---",
+      "source_pages": []
+    },
+     {
+      "question": "Which of the following statements best defines a data warehouse?",
+      "options": {
+        "A": "A volatile collection of operational data used for day‑to‑day transactions.",
+        "B": "A subject‑oriented, integrated, time‑variant, and non‑volatile data collection supporting management decision making.",
+        "C": "A repository that stores only raw, unprocessed data from source systems.",
+        "D": "A tool that only provides front‑end query and reporting capabilities."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Remember",
+      "difficulty": "Easy",
+      "explanation": "A data warehouse is described as “subject‑oriented, integrated, time‑variant, and non‑volatile… in support of management decision making” [Page 96].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which of the following is NOT listed as a back‑end tool or utility used for populating and refreshing a data warehouse?",
+      "options": {
+        "A": "Data extraction",
+        "B": "Data cleaning",
+        "C": "Data transformation",
+        "D": "Data visualization"
+      },
+      "correct_answer": "D",
+      "bloom_level": "Remember",
+      "difficulty": "Easy",
+      "explanation": "The context lists extraction, cleaning, transformation, loading, refreshing, and management, but not visualization as back‑end tools [Page 96].\n\n---",
+      "source_pages": []
+    },
+     {
+      "question": "Which of the following is **not** considered one of the four key characteristics of a data warehouse?",
+      "options": {
+        "A": "Subject‑oriented",
+        "B": "Integrated",
+        "C": "Time‑variant",
+        "D": "Volatile"
+      },
+      "correct_answer": "D",
+      "bloom_level": "Remember",
+      "difficulty": "Easy",
+      "explanation": "The four characteristics listed on page 96 are subject‑oriented, integrated, time‑variant, and nonvolatile; therefore “volatile” is not a characteristic.  \n\n---",
+      "source_pages": []
+    },
+     {
+      "question": "Why is normalizing data to a range such as [0.0, 1.0] important when applying a distance‑based anomaly detection algorithm?",
+      "options": {
+        "A": "It reduces the dimensionality of the data, making clustering faster.",
+        "B": "It ensures that all attributes contribute equally to distance calculations, improving accuracy.",
+        "C": "It removes outliers before the algorithm runs, guaranteeing no false alarms.",
+        "D": "It converts categorical attributes into numerical values suitable for distance metrics."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "Normalization scales attributes so that no single attribute dominates the distance measure, which improves the accuracy and efficiency of distance‑based mining algorithms. [Page 1, Page 4]\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "In a clustering‑based distance outlier detection method, what indicates that an object is likely an outlier?",
+      "options": {
+        "A": "The object lies exactly at the centroid of its nearest cluster.",
+        "B": "The distance between the object and the nearest cluster’s centroid is larger than a predefined threshold.",
+        "C": "The object belongs to multiple clusters simultaneously.",
+        "D": "The object has the smallest average distance to all other objects in the dataset."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "An object whose distance to the closest cluster is large is considered an outlier with respect to that cluster. [Page 124]\n\n---",
+      "source_pages": []
+    },
+    {
+    
+      "question": "Which of the following best describes the role of “distance to the closest cluster” in clustering‑based outlier detection?",
+      "options": {
+        "A": "It is used to compute the silhouette score for cluster validation.",
+        "B": "It serves as a direct measure to decide whether an object deviates significantly from typical cluster patterns.",
+        "C": "It determines the number of clusters to be formed in the dataset.",
+        "D": "It replaces the need for any data preprocessing such as normalization."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "The distance to the nearest cluster provides a straightforward criterion for labeling an object as an outlier. [Page 124]\n\n---",
+      "source_pages": []
+    },
+     {
+      "question": "When clustering is used to generate a concept hierarchy, each cluster becomes what element of the hierarchy?",
+      "options": {
+        "A": "A leaf node only",
+        "B": "A node of the concept hierarchy",
+        "C": "The root of the hierarchy exclusively",
+        "D": "An isolated sub‑hierarchy"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "The passage notes that “each cluster forms a node of the concept hierarchy” when clustering is used for hierarchy generation [Page 34].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which approach starts with each data point as its own cluster and iteratively merges them?",
+      "options": {
+        "A": "Top‑down splitting",
+        "B": "Bottom‑up merging",
+        "C": "K‑means clustering",
+        "D": "Divisive hierarchical clustering"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "A bottom‑up (agglomerative) approach begins with individual items as separate clusters and repeatedly merges the nearest ones, as described in the passage [Page 34].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "When data are “contaminated, with some values out of range or of a different data type than expected,” which phase of the data preprocessing pipeline is most appropriate to address this issue?",
+      "options": {
+        "A": "Data integration",
+        "B": "Data cleaning",
+        "C": "Data transformation",
+        "D": "Data reduction"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "The passage describes such cases as part of “dirty” input that must be handled during data cleaning [Page 41].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which of the following best explains why “ignoring the tuple” is a poor strategy when the missing values are limited to a few attributes rather than many?",
+      "options": {
+        "A": "It reduces the dataset size unnecessarily, losing valuable information.",
+        "B": "It violates the assumption of independence among attributes.",
+        "C": "It increases computational complexity of subsequent mining tasks.",
+        "D": "It introduces duplicate records into the dataset."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "Ignoring tuples discards potentially useful data, especially when only a few attributes are missing, making the method ineffective [Page 6].\n\n---",
+      "source_pages": []
+    },
+    {
+        
+      "question": "In a multidimensional data mining scenario, which of the following best describes the role of OLAP?",
+      "options": {
+        "A": "It replaces the need for any data mining algorithms.",
+        "B": "It provides the exploratory interface that enables mining of knowledge from multidimensional databases.",
+        "C": "It stores only transactional (OLTP) data for fast updates.",
+        "D": "It limits the analysis to two‑dimensional tabular views."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "Multidimensional data mining (or OLAM) integrates OLAP with data mining to uncover knowledge in multidimensional databases, as highlighted on pages 73‑74.\n\n---",
+      "source_pages": []
+    },
+     {
+      "question": "In the three‑tier data warehousing architecture, which tier is primarily responsible for executing OLAP operations such as roll‑up and drill‑down?",
+      "options": {
+        "A": "The presentation tier (client).",
+        "B": "The middle tier (OLAP server).",
+        "C": "The bottom tier (data storage).",
+        "D": "The integration tier (ETL processes)."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "The middle tier is the OLAP server that implements multidimensional operations, as described on page 50.\n\n---",
+      "source_pages": []
+    },
+     {
+      "question": "Which OLAP operation aggregates data by moving from a lower‑level member to a higher‑level member in a dimension hierarchy (e.g., from city to province/state)?",
+      "options": {
+        "A": "Drill‑down",
+        "B": "Roll‑up",
+        "C": "Slice",
+        "D": "Pivot"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "Roll‑up is defined as the aggregation (group‑by) from a detailed level to a higher level in a hierarchy, as described in the discussion of transforming roll‑up operations into SQL or OLAP actions [Page 81].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "A query requests sales for the year 2010 across the dimensions {brand, province/state}. Which OLAP operation(s) should be applied first to restrict the data to the year 2010?",
+      "options": {
+        "A": "Drill‑down on year, then slice on brand",
+        "B": "Slice on year, then projection on brand and province/state",
+        "C": "Roll‑up on year, then dice on brand and province/state",
+        "D": "Pivot on year, then roll‑up on brand"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Apply",
+      "difficulty": "Medium",
+      "explanation": "Slicing corresponds to a selection constant such as “year = 2010,” and projection selects the required dimensions, matching the description that slicing and dicing map to selection and projection on a materialized cuboid [Page 81].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Considering the three‑tier model, which layer is most likely to be refreshed periodically through ETL processes, and how does this differ from the refresh behavior of OLTP systems?",
+      "options": {
+        "A": "Top tier – refreshed continuously like OLTP.",
+        "B": "Middle tier – refreshed only on demand, unlike OLTP’s real‑time updates.",
+        "C": "Bottom tier – operational databases are refreshed via ETL, similar to OLTP.",
+        "D": "Bottom tier – data warehouse is refreshed periodically, whereas OLTP updates are immediate."
+      },
+      "correct_answer": "D",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "ETL “Extract, Clean, Transform, Load” feeds the data warehouse (bottom tier) which is refreshed on a schedule, while OLTP databases are updated in real time as transactions occur. [Page 49]\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Considering the data update frequency, which statement accurately reflects the difference between OLTP and OLAP environments?",
+      "options": {
+        "A": "OLTP databases are refreshed nightly, while OLAP warehouses are updated in real time.",
+        "B": "OLTP systems handle continuous, real‑time updates; OLAP systems are refreshed periodically (e.g., nightly or weekly).",
+        "C": "Both OLTP and OLAP systems update data continuously at the same rate.",
+        "D": "OLAP systems never receive new data after the initial load."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "OLTP supports ongoing transactional updates, whereas OLAP data warehouses are refreshed in batches, as implied by the ETL process described on page 49.  \n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which of the following best explains why OLAP systems typically require a different schema design (e.g., star or snowflake) compared to OLTP systems?",
+      "options": {
+        "A": "OLAP schemas minimize redundancy to speed up transaction processing.",
+        "B": "OLTP schemas are optimized for complex joins across many dimensions.",
+        "C": "OLAP schemas organize data around facts and dimensions to facilitate fast aggregation and slicing, unlike normalized OLTP schemas.",
+        "D": "Both OLTP and OLAP use identical normalized schemas, so there is no difference."
+      },
+      "correct_answer": "C",
+      "bloom_level": "Analyze",
+      "difficulty": "Medium",
+      "explanation": "The context notes that OLAP servers sit above a data warehouse that stores data in multidimensional structures, requiring star/snowflake schemas to enable efficient analytical operations (page 49).  \n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which of the following best explains why the choice of a deviation measurement is critical for detecting global outliers?",
+      "options": {
+        "A": "Because the measurement determines the dimensionality of the data representation",
+        "B": "Because it directly influences how far a point must be from the majority to be flagged as an outlier",
+        "C": "Because it sets the threshold for the number of clusters the algorithm will create",
+        "D": "Because it decides whether bitmap indexing can be applied efficiently"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "Detecting global outliers requires an appropriate measurement of deviation; this measurement defines what constitutes sufficient deviation to label a point as an outlier [Page 101].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "How does the text justify the need for “appropriate measurement of deviation” before applying outlier detection?",
+      "options": {
+        "A": "Because it determines whether bitmap indexing can be used",
+        "B": "Because different applications may define “outlier” differently, affecting detection performance",
+        "C": "Because it sets the number of clusters the algorithm must generate",
+        "D": "Because it is required for constructing a correlation matrix among attributes"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "The passage highlights that finding an appropriate measurement of deviation is critical because it must align with the specific application’s definition of what constitutes an outlier [Page 101].\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Which approach is most suitable for detecting outliers in **multivariate data** by converting the problem to a univariate one?",
+      "options": {
+        "A": "Applying a distance‑based proximity method directly to the multivariate space.",
+        "B": "Using a clustering‑based method to form clusters and flag points outside any cluster.",
+        "C": "Transforming the multivariate data into a single attribute (e.g., via a statistical summary) and then applying a univariate outlier detector.",
+        "D": "Training a classification model with outlier labels on the original multivariate attributes."
+      },
+      "correct_answer": "C",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "The text states that many univariate methods can be extended to multivariate data by transforming the multivariate detection task into a univariate problem [Page 112].  \n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Why is it important to include a contrasting measure such as count% when presenting the final class comparison of discovered patterns?",
+      "options": {
+        "A": "It reduces the computational cost of mining by limiting the number of rules.",
+        "B": "It provides a quantitative way to compare the prevalence of a pattern in the target class versus a contrasting class, highlighting its discriminative power.",
+        "C": "It eliminates the need for attribute relevance analysis.",
+        "D": "It ensures that all attributes are treated equally in the final description."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "A contrasting measure like count% directly compares the target and contrasting classes, helping to assess how interesting or discriminative a rule is, as noted in the discussion of visualization on [Page 95].\n\n---",
+      "source_pages": []
+    },
+     {
+      "question": "How does the “count%” contrasting measure assist a user in interpreting the interestingness of a rule?",
+      "options": {
+        "A": "It shows the absolute number of instances covered by the rule in the whole database.",
+        "B": "It indicates the proportion of the target class covered relative to the contrasting class, highlighting the rule’s discriminative strength.",
+        "C": "It provides a ranking of attributes by their correlation values.",
+        "D": "It replaces the need for confidence and support calculations."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Easy",
+      "explanation": "The count% measure directly compares the target and contrasting classes, helping users gauge how strongly a rule distinguishes between them ([Page 95]).\n\n---",
+      "source_pages": []
+    },
+    {
+      "question": "Why might a user sample the working relation W when scanning for distinct attribute values during generalization?",
+      "options": {
+        "A": "To ensure that every possible value is captured for accurate pattern evaluation.",
+        "B": "To reduce computational effort while still obtaining a representative set of values for evaluating pattern interestingness.",
+        "C": "To eliminate the need for any statistical analysis later in the process.",
+        "D": "To automatically generate contrasting measures for each attribute."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "difficulty": "Medium",
+      "explanation": "Sampling W is suggested when W is very large, providing a practical way to collect distinct values without exhaustive scanning, which supports efficient evaluation of patterns ([Page 91]).\n\n---",
+      "source_pages": []
+    }
+
+]

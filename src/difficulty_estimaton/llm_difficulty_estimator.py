@@ -13,9 +13,9 @@ from collections import defaultdict, Counter
 from dotenv import load_dotenv
 from pathlib import Path
 
-from feature_extraction import extract_features
+from .feature_extraction import extract_features
 
-load_dotenv(Path(__file__).parent / ".env")
+load_dotenv(Path(__file__).resolve().parents[2] / ".env")
 api_key = os.getenv("GROQ_API_KEY")
 if not api_key:
     raise ValueError("GROQ_API_KEY not set")
