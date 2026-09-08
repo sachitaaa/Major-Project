@@ -130,6 +130,7 @@ def extract_features(mcq, embedder=None):
     explanation = mcq.get('explanation', '')
     bloom_provided = mcq.get('bloom_level', '')
     citation = mcq.get('citation', '')
+    difficulty = mcq.get('difficulty', '')  # self-reported difficulty, passed through
 
     # ---- Basic Tokenization ----
     q_tokens = tokenize(question)
@@ -195,7 +196,7 @@ def extract_features(mcq, embedder=None):
             flesch_kincaid_grade = round(textstat.flesch_kincaid_grade(question), 2)
             smog_index = round(textstat.smog_index(question), 2)
             coleman_liau_index = round(textstat.coleman_liau_index(question), 2)
-        except:
+        except Exception:
             pass
 
     # ---- Bloom ----
@@ -218,6 +219,7 @@ def extract_features(mcq, embedder=None):
 
     # ---- Build Result Dictionary ----
     result = {
+        'question': question,
         'stem_word_count': stem_word_count,
         'stem_char_count': stem_char_count,
         'stem_unique_ratio': round(stem_unique_ratio, 3),
@@ -236,8 +238,10 @@ def extract_features(mcq, embedder=None):
         'expl_to_distractor_avg_jaccard': round(expl_to_distractor_avg_jaccard, 3),
         'expl_new_info_ratio': round(expl_new_info_ratio, 3),
         'expl_contains_correct_verbatim': expl_contains_correct_verbatim,
-        'citation_length': len(citation.strip()),
+        'citation_length': len(citation.strip()) if isinstance(citation, str) else 0,
         'bloom_taxonomy_level': bloom_level,
+        'bloom_level_provided': bloom_provided,
+        'difficulty': difficulty,
         'flesch_reading_ease': flesch_reading_ease,
         'flesch_kincaid_grade': flesch_kincaid_grade,
         'smog_index': smog_index,
@@ -254,12 +258,13 @@ def main():
     parser = argparse.ArgumentParser(description='Extract comprehensive features from generated MCQs.')
     parser.add_argument('--input', required=True, help='JSON file with generated MCQs')
     parser.add_argument('--output', default='mcq_features.csv', help='Output CSV for per-question features')
-    parser.add_argument('--subject_field', default='subject', help='Field name for subject (if any)')
-    parser.add_argument('--subject_override', default=None,
-                        help='Override subject for all MCQs (ignores --subject_field)')
-    parser.add_argument('--aggregate', default='aggregate_stats.csv', help='Output CSV for aggregated stats')
+    parser.add_argument('--subject', default=None,
+                         help='Subject label to tag every row with. If omitted, derived automatically from the input filename (e.g. ai.json -> ai).')
     parser.add_argument('--use_embeddings', action='store_true', help='Use sentence-transformers for semantic similarity')
     args = parser.parse_args()
+
+    if args.subject is None:
+        args.subject = Path(args.input).stem  # e.g. "ai.json" -> "ai", "computernetworks.json" -> "computernetworks"
 
     embedder = None
     if args.use_embeddings:
@@ -271,23 +276,18 @@ def main():
         print("Model loaded.")
 
     mcqs = load_mcqs(args.input)
-    print(f"Loaded {len(mcqs)} MCQs.")
+    print(f"Loaded {len(mcqs)} MCQs from {args.input}")
     if mcqs:
         print("First MCQ keys:", list(mcqs[0].keys()))
 
     feature_list = []
     for mcq in mcqs:
         features = extract_features(mcq, embedder)
-        if args.subject_override:
-            subject = args.subject_override
-        else:
-            subject = mcq.get(args.subject_field, 'Overall')
-        features['subject'] = subject if subject else 'Overall'
+        features['subject'] = args.subject
         feature_list.append(features)
 
-    # Define columns for export
     columns = [
-        'subject', 'bloom_taxonomy_level',
+        'subject', 'question', 'bloom_taxonomy_level', 'bloom_level_provided',
         'stem_word_count', 'stem_char_count', 'stem_unique_ratio',
         'num_options',
         'avg_option_word_count', 'std_option_word_count', 'avg_option_char_count',
@@ -303,97 +303,18 @@ def main():
         'expl_new_info_ratio',
         'expl_contains_correct_verbatim',
         'citation_length',
+        'difficulty',
         'flesch_reading_ease', 'flesch_kincaid_grade', 'smog_index', 'coleman_liau_index'
     ]
     if args.use_embeddings and feature_list and 'expl_semantic_to_question_cos' in feature_list[0]:
         columns += ['expl_semantic_to_question_cos', 'expl_semantic_to_correct_cos']
 
-    # ---- Write per-question CSV ----
     with open(args.output, 'w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=columns)
         writer.writeheader()
         for row in feature_list:
             writer.writerow({k: row.get(k, '') for k in columns})
     print(f"Per-question features saved to {args.output}")
-
-    # ---- Aggregate statistics ----
-    subjects = set(row['subject'] for row in feature_list)
-    aggregates = []
-    numeric_fields = [c for c in columns if c not in ['subject', 'bloom_taxonomy_level', 'correct_answer_index', 'expl_contains_correct_verbatim']]
-
-    for sub in subjects:
-        sub_rows = [r for r in feature_list if r['subject'] == sub]
-        if not sub_rows:
-            continue
-        agg = {'subject': sub, 'n': len(sub_rows)}
-        for field in numeric_fields:
-            vals = [r[field] for r in sub_rows if r.get(field) is not None and r.get(field) != '']
-            if vals:
-                agg[f'avg_{field}'] = round(sum(vals) / len(vals), 3)
-                if len(vals) > 1:
-                    agg[f'std_{field}'] = round(math.sqrt(sum((x - agg[f'avg_{field}'])**2 for x in vals) / len(vals)), 3)
-                else:
-                    agg[f'std_{field}'] = 0.0
-            else:
-                agg[f'avg_{field}'] = 0.0
-                agg[f'std_{field}'] = 0.0
-        # Correct answer distribution
-        indices = [r['correct_answer_index'] for r in sub_rows if r.get('correct_answer_index') != -1]
-        if indices:
-            for i in range(4):
-                agg[f'pct_ans_{i}'] = round(sum(1 for idx in indices if idx == i) / len(indices) * 100, 1)
-        # Bloom distribution
-        blooms = [r['bloom_taxonomy_level'] for r in sub_rows if r.get('bloom_taxonomy_level') != 'unknown']
-        if blooms:
-            for level in ['remember', 'understand', 'apply', 'analyze', 'evaluate', 'create']:
-                agg[f'pct_bloom_{level}'] = round(sum(1 for b in blooms if b == level) / len(blooms) * 100, 1)
-        # Verbatim copy
-        verbatim_vals = [r['expl_contains_correct_verbatim'] for r in sub_rows if 'expl_contains_correct_verbatim' in r]
-        if verbatim_vals:
-            agg['pct_expl_verbatim'] = round(sum(1 for v in verbatim_vals if v) / len(verbatim_vals) * 100, 1)
-        aggregates.append(agg)
-
-    if aggregates:
-        sample = aggregates[0]
-        agg_columns = ['subject', 'n']
-        for key in sorted(sample.keys()):
-            if key not in ['subject', 'n']:
-                agg_columns.append(key)
-    else:
-        agg_columns = ['subject', 'n']
-
-    with open(args.aggregate, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=agg_columns)
-        writer.writeheader()
-        for row in aggregates:
-            writer.writerow({k: row.get(k, '') for k in agg_columns})
-    print(f"Aggregated stats saved to {args.aggregate}")
-
-    # ---- Console Summary ----
-    overall = [r for r in feature_list if r['subject'] == 'Overall']
-    if overall:
-        print("\n=== OVERALL SUMMARY ===")
-        print(f"Total MCQs: {len(overall)}")
-        print(f"Avg Stem Words: {sum(r['stem_word_count'] for r in overall)/len(overall):.1f}")
-        print(f"Avg Option Words: {sum(r['avg_option_word_count'] for r in overall)/len(overall):.2f}")
-        print(f"Avg Pairwise Jaccard: {sum(r['pairwise_avg_jaccard'] for r in overall)/len(overall):.3f}")
-        print(f"Avg Distractor Similarity to Correct: {sum(r['avg_distractor_jaccard_to_correct'] for r in overall)/len(overall):.3f}")
-        print(f"Avg Explanation Words: {sum(r['explanation_word_count'] for r in overall)/len(overall):.1f}")
-        print(f"Expl -> Question Jaccard: {sum(r['expl_to_question_jaccard'] for r in overall)/len(overall):.3f}")
-        print(f"Expl -> Correct Jaccard: {sum(r['expl_to_correct_jaccard'] for r in overall)/len(overall):.3f}")
-        print(f"New Information Ratio: {sum(r['expl_new_info_ratio'] for r in overall)/len(overall):.3f}")
-        print(f"Verbatim Copy: {sum(1 for r in overall if r['expl_contains_correct_verbatim'])/len(overall)*100:.1f}%")
-        if READABILITY_AVAILABLE:
-            print(f"Avg Flesch Reading Ease: {sum(r['flesch_reading_ease'] for r in overall if r['flesch_reading_ease'])/len(overall):.1f}")
-            print(f"Avg Flesch-Kincaid Grade: {sum(r['flesch_kincaid_grade'] for r in overall if r['flesch_kincaid_grade'])/len(overall):.1f}")
-        blooms = [r['bloom_taxonomy_level'] for r in overall if r.get('bloom_taxonomy_level') != 'unknown']
-        if blooms:
-            print("Bloom Distribution:")
-            for level in ['remember', 'understand', 'apply', 'analyze', 'evaluate', 'create']:
-                pct = sum(1 for b in blooms if b == level) / len(blooms) * 100
-                print(f"  {level}: {pct:.1f}%")
-
-    print("\nDone! Use the CSVs for plots and tables in Section 4.2.")
 
 if __name__ == '__main__':
     main()
