@@ -1,0 +1,7 @@
+,Explanation words,New information ratio,Expl→Correct Jaccard,Expl→Question Jaccard,Option words,Stem words
+Explanation words,1.0,0.282,-0.193,0.01,0.13,0.323
+New information ratio,0.282,1.0,-0.691,-0.498,-0.081,0.089
+Expl→Correct Jaccard,-0.193,-0.691,1.0,-0.06,0.318,-0.261
+Expl→Question Jaccard,0.01,-0.498,-0.06,1.0,-0.254,0.096
+Option words,0.13,-0.081,0.318,-0.254,1.0,-0.142
+Stem words,0.323,0.089,-0.261,0.096,-0.142,1.0

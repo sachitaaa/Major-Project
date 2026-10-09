@@ -300,14 +300,14 @@ def main():
 
     fig_confusion_matrix(
         conf_feat,
-        "Confusion Matrix: Self-Reported vs. Feature-Derived Difficulty (n=215)",
+        "Confusion Matrix: Self-Reported vs. Feature-Derived Difficulty (n=211)",
         "fig4_confusion_feature.png",
         args.outdir,
     )
 
     fig_confusion_matrix(
         conf_llm,
-        "Confusion Matrix: Self-Reported vs. LLM-Response-Augmented Difficulty",
+        "Confusion Matrix: Self-Reported vs. LLM-Response-Augmented Difficulty (n=211)",
         "fig4b_confusion_llm.png",
         args.outdir,
     )

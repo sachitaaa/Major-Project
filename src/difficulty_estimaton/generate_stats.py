@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-CSV_PATH = '/home/sujal/Programming/MajorProject/evaluation/all_features_combined.csv'
+CSV_PATH = '/home/sujal/Programming/MajorProject/evaluation/master_dataset.csv'
 OUTPUT_DIR = '/home/sujal/Programming/MajorProject/evaluation'
 
 df = pd.read_csv(CSV_PATH)

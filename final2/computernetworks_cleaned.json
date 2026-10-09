@@ -1,0 +1,1212 @@
+{
+  "subject": "computernetworks",
+  "total_questions": 50,
+  "questions": [
+    {
+      "question_id": "CN_001",
+      "question": "Define socket programming. How does a program running on one end system instruct the Internet to deliver data to a program on another end system?",
+      "options": {
+        "A": "By sending an email to the destination host’s address.",
+        "B": "By using the socket interface that specifies destination address and port.",
+        "C": "By directly accessing the routing tables of intermediate routers.",
+        "D": "By embedding the data in DNS queries."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Remember",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The context explains that the socket interface “specifies how a program running on one end system asks the Internet infrastructure to deliver data to a specific destination program” [Page 6].",
+      "citation_pages": [
+        6
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.7821459174156189,
+      "expl_to_correct_cosine": 0.5130119323730469,
+      "expl_to_question_jaccard": 0.4666666666666667,
+      "expl_to_correct_jaccard": 0.2
+    },
+    {
+      "question_id": "CN_002",
+      "question": "Apply the socket interface concept: If Alice wants to send a letter to Bob using the Internet analogy, which of the following best represents the “postal service interface” in socket programming?",
+      "options": {
+        "A": "The TCP checksum algorithm.",
+        "B": "The socket API that the program must follow.",
+        "C": "The physical Ethernet cable.",
+        "D": "The DNS server that resolves host names."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Apply",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The text likens the Internet’s “socket interface” to a postal service interface that programs must follow to have data delivered, indicating the socket API is the analogous component [Page 6].",
+      "citation_pages": [
+        6
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.7351078391075134,
+      "expl_to_correct_cosine": 0.5478110909461975,
+      "expl_to_question_jaccard": 0.19047619047619047,
+      "expl_to_correct_jaccard": 0.23076923076923078
+    },
+    {
+      "question_id": "CN_003",
+      "question": "Define the role of end systems in socket programming. Which statement best captures their function according to the context?",
+      "options": {
+        "A": "End systems process packets in the network core.",
+        "B": "End systems provide the socket interface that programs use to send and receive data.",
+        "C": "End systems generate routing protocols for the Internet.",
+        "D": "End systems act as firewalls for all incoming traffic."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Remember",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The passage states that “End systems attached to the Internet provide a socket interface” for programs to request data delivery [Page 6].",
+      "citation_pages": [
+        6
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.6624280214309692,
+      "expl_to_correct_cosine": 0.8540402054786682,
+      "expl_to_question_jaccard": 0.15151515151515152,
+      "expl_to_correct_jaccard": 0.4166666666666667
+    },
+    {
+      "question_id": "CN_004",
+      "question": "Apply the analogy given: If the postal service delivers a letter based on an address and a recipient’s name, what two pieces of information does a socket program typically specify to deliver data?",
+      "options": {
+        "A": "MAC address and VLAN ID.",
+        "B": "IP address and port number.",
+        "C": "URL and HTTP method.",
+        "D": "File name and directory path."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Apply",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The socket interface requires specifying a destination program, which in network terms translates to an IP address and a port number, as implied by the postal analogy [Page 6].",
+      "citation_pages": [
+        6
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.6594482660293579,
+      "expl_to_correct_cosine": 0.5706075429916382,
+      "expl_to_question_jaccard": 0.20833333333333334,
+      "expl_to_correct_jaccard": 0.18518518518518517
+    },
+    {
+      "question_id": "CN_005",
+      "question": "Define why packet switches are not concerned with the application source or sink in socket programming.",
+      "options": {
+        "A": "Because they encrypt all application data.",
+        "B": "Because they only forward packets based on network-layer addresses, not application-layer identifiers.",
+        "C": "Because they store the entire application code for execution.",
+        "D": "Because they assign dynamic ports to each application."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Remember",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The context notes that “packet switches facilitate the exchange of data among end systems, they are not concerned with the application that is the source or sink of data” [Page 5].",
+      "citation_pages": [
+        5
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.7354508638381958,
+      "expl_to_correct_cosine": 0.39281272888183594,
+      "expl_to_question_jaccard": 0.36666666666666664,
+      "expl_to_correct_jaccard": 0.08571428571428572
+    },
+    {
+      "question_id": "CN_006",
+      "question": "Apply the concept of distributed applications: Which scenario best illustrates a distributed application using sockets as described?",
+      "options": {
+        "A": "A single desktop program that processes local files only.",
+        "B": "Two programs running on the same computer communicating via shared memory.",
+        "C": "Programs on separate end systems exchanging data over the Internet using sockets.",
+        "D": "A router updating its routing table via OSPF."
+      },
+      "correct_answer": "C",
+      "bloom_level": "Apply",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The passage describes “distributed applications” as those where “programs running on the different end systems will need to send data to each other” using the socket interface [Page 6].",
+      "citation_pages": [
+        6
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.8366154432296753,
+      "expl_to_correct_cosine": 0.7484550476074219,
+      "expl_to_question_jaccard": 0.13513513513513514,
+      "expl_to_correct_jaccard": 0.22580645161290322
+    },
+    {
+      "question_id": "CN_007",
+      "question": "Define the relationship between RFCs and socket programming. Which statement correctly reflects this relationship?",
+      "options": {
+        "A": "RFCs prescribe the exact socket API functions developers must use.",
+        "B": "RFCs define the underlying protocols (e.g., TCP, IP) that socket programming relies on.",
+        "C": "RFCs are only about hardware specifications, not software interfaces.",
+        "D": "RFCs replace the need for a socket interface."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Remember",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The text notes that RFCs “define protocols such as TCP, IP, HTTP…”, which are the protocols that socket programming interfaces with [Page 5].",
+      "citation_pages": [
+        5
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.7181788682937622,
+      "expl_to_correct_cosine": 0.8665315508842468,
+      "expl_to_question_jaccard": 0.2222222222222222,
+      "expl_to_correct_jaccard": 0.36
+    },
+    {
+      "question_id": "CN_008",
+      "question": "Apply the socket programming process: To create a simple web server, which sequence of socket operations is most appropriate?",
+      "options": {
+        "A": "Open socket → bind to port → listen → accept connections → send/receive data.",
+        "B": "Open socket → send data → close socket → listen.",
+        "C": "Resolve DNS → open socket → broadcast packet → wait.",
+        "D": "Create thread → open socket → encrypt data → forward to router."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Apply",
+      "self_reported_difficulty": "Hard",
+      "feature_derived_difficulty": "Medium",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "While not listed verbatim, the logical steps follow from the description of how programs use the socket interface to deliver data, implying the standard server sequence (open, bind, listen, accept, communicate) [Page 6].",
+      "citation_pages": [
+        6
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.6529178619384766,
+      "expl_to_correct_cosine": 0.6750448942184448,
+      "expl_to_question_jaccard": 0.14285714285714285,
+      "expl_to_correct_jaccard": 0.20588235294117646
+    },
+    {
+      "question_id": "CN_009",
+      "question": "Define how a programmer can transform the postal‑service analogy into an actual Internet application. Which action aligns with the context’s guidance?",
+      "options": {
+        "A": "Write the program in any language (e.g., Java, C, Python) and use the socket API to communicate.",
+        "B": "Modify the Internet backbone routers to recognize custom addresses.",
+        "C": "Use only high‑level web browsers to send data.",
+        "D": "Embed the entire application code into DNS records."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Remember",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The passage suggests that to turn the idea into an application, “you are going to need to write programs… in Java, C, or Python” that use the socket interface [Page 6].",
+      "citation_pages": [
+        6
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.3086521029472351,
+      "expl_to_correct_cosine": 0.6513214111328125,
+      "expl_to_question_jaccard": 0.09090909090909091,
+      "expl_to_correct_jaccard": 0.2647058823529412
+    },
+    {
+      "question_id": "CN_010",
+      "question": "Apply the concept of “socket interface” to explain why a program cannot directly instruct the network core to deliver data. Which answer best reflects this limitation?",
+      "options": {
+        "A": "Because only the operating system’s kernel can access the network core.",
+        "B": "Because the socket interface abstracts delivery, leaving routing to the Internet infrastructure.",
+        "C": "Because the program must first become a router.",
+        "D": "Because the Internet core blocks all program‑level traffic."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Apply",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "The context states that the socket interface “specifies how the sending program must follow so that the Internet can deliver the data,” implying the program relies on the network’s routing mechanisms rather than direct control [Page 6].",
+      "citation_pages": [
+        6
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.7158457040786743,
+      "expl_to_correct_cosine": 0.7165606021881104,
+      "expl_to_question_jaccard": 0.14893617021276595,
+      "expl_to_correct_jaccard": 0.1388888888888889
+    },
+    {
+      "question_id": "CN_011",
+      "question": "Which of the following best describes a service that the transport layer provides directly to applications?",
+      "options": {
+        "A": "Routing datagrams through multiple routers",
+        "B": "Adding a transport‑layer header to form a segment",
+        "C": "Converting electrical signals into bits",
+        "D": "Managing physical cable connections"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The transport layer creates a segment by appending transport‑layer header information to the application‑layer message, as described on page 53.",
+      "citation_pages": [
+        53
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.5355966091156006,
+      "expl_to_correct_cosine": 0.7081611156463623,
+      "expl_to_question_jaccard": 0.17857142857142858,
+      "expl_to_correct_jaccard": 0.3
+    },
+    {
+      "question_id": "CN_012",
+      "question": "How does the transport layer make use of the network layer when delivering a segment to the destination host?",
+      "options": {
+        "A": "It asks the network layer to establish a physical circuit between the hosts.",
+        "B": "It relies on the network layer to route the segment’s datagram through routers.",
+        "C": "It transfers the segment directly over the link layer, bypassing the network layer.",
+        "D": "It encrypts the segment and hands it to the network layer for de‑encryption at the receiver."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The transport layer hands the segment to the network layer, which then routes the datagram through a series of routers, as noted on page 51.",
+      "citation_pages": [
+        51
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.6959166526794434,
+      "expl_to_correct_cosine": 0.7563217878341675,
+      "expl_to_question_jaccard": 0.27586206896551724,
+      "expl_to_correct_jaccard": 0.36
+    },
+    {
+      "question_id": "CN_013",
+      "question": "According to the service‑model description, what two actions does a layer perform to provide its service to the layer above?",
+      "options": {
+        "A": "Storing data permanently and providing user authentication",
+        "B": "Performing specific actions within the layer and using services of the layer below it",
+        "C": "Generating random numbers and encrypting traffic",
+        "D": "Monitoring hardware temperature and adjusting clock speed"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "A layer offers its service by (1) performing certain actions within that layer and (2) using the services of the layer directly below, as stated on page 49.",
+      "citation_pages": [
+        49
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.8247215747833252,
+      "expl_to_correct_cosine": 0.762414813041687,
+      "expl_to_question_jaccard": 0.17142857142857143,
+      "expl_to_correct_jaccard": 0.37037037037037035
+    },
+    {
+      "question_id": "CN_014",
+      "question": "When a transport‑layer segment is created, what does the added header information primarily enable at the receiver side?",
+      "options": {
+        "A": "Physical connection establishment between hosts",
+        "B": "Identification and correct processing of the received data by the transport layer",
+        "C": "Direct access to the network’s routing tables",
+        "D": "Automatic translation of IP addresses to MAC addresses"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Medium",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The transport‑layer header is used by the receiver‑side transport layer to process the incoming segment, as explained on page 53.",
+      "citation_pages": [
+        53
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.8683902025222778,
+      "expl_to_correct_cosine": 0.5820649862289429,
+      "expl_to_question_jaccard": 0.2857142857142857,
+      "expl_to_correct_jaccard": 0.16
+    },
+    {
+      "question_id": "CN_015",
+      "question": "How does the reliable delivery service offered by the transport layer differ from the reliable delivery service of the link layer?",
+      "options": {
+        "A": "Transport‑layer reliability covers delivery from one end system to another, while link‑layer reliability is confined to a single hop.",
+        "B": "Transport‑layer reliability guarantees delivery without any acknowledgments, unlike the link layer.",
+        "C": "Transport‑layer reliability is provided only by UDP, whereas the link layer uses TCP.",
+        "D": "There is no difference; both layers provide identical reliability mechanisms."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Medium",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The context notes that transport‑layer reliability (e.g., TCP) spans end‑to‑end delivery, whereas link‑layer reliability operates only on a single link, as mentioned on page 51.",
+      "citation_pages": [
+        51
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.7994251251220703,
+      "expl_to_correct_cosine": 0.8584543466567993,
+      "expl_to_question_jaccard": 0.14705882352941177,
+      "expl_to_correct_jaccard": 0.2647058823529412
+    },
+    {
+      "question_id": "CN_016",
+      "question": "Which characteristic uniquely identifies TCP among the transport protocols described in the context?",
+      "options": {
+        "A": "It provides a connection‑oriented service with guaranteed delivery.",
+        "B": "It broadcasts messages to all hosts on the network.",
+        "C": "It operates without any header information.",
+        "D": "It routes packets directly through physical cables."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Medium",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "TCP is described as providing a connection‑oriented service that includes guaranteed delivery of application‑layer messages, as stated on page 50.",
+      "citation_pages": [
+        50
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.6292517185211182,
+      "expl_to_correct_cosine": 0.6151422262191772,
+      "expl_to_question_jaccard": 0.06451612903225806,
+      "expl_to_correct_jaccard": 0.25
+    },
+    {
+      "question_id": "CN_017",
+      "question": "In moving a packet from one node to the next on its route, which layer’s service does the network layer depend upon?",
+      "options": {
+        "A": "Application layer",
+        "B": "Transport layer",
+        "C": "Link layer",
+        "D": "Physical layer"
+      },
+      "correct_answer": "C",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Medium",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "To move a packet to the next node, the network layer relies on the services of the link layer, as indicated on page 51.",
+      "citation_pages": [
+        51
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.7791529893875122,
+      "expl_to_correct_cosine": 0.4881213903427124,
+      "expl_to_question_jaccard": 0.3,
+      "expl_to_correct_jaccard": 0.1111111111111111
+    },
+    {
+      "question_id": "CN_018",
+      "question": "How does the analogy of “packets as trucks and highways as links” help explain the transport layer’s role?",
+      "options": {
+        "A": "It shows that the transport layer builds physical roads for data.",
+        "B": "It illustrates that the transport layer packages application data (the “cargo”) for transport across the network.",
+        "C": "It indicates that the transport layer controls traffic lights at intersections.",
+        "D": "It suggests that the transport layer manufactures the trucks themselves."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The analogy equates packets to trucks carrying cargo (application data) that travel on highways (links), highlighting the transport layer’s function of encapsulating data for transmission, as described on page 4.",
+      "citation_pages": [
+        4
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.8368300199508667,
+      "expl_to_correct_cosine": 0.7617509365081787,
+      "expl_to_question_jaccard": 0.3235294117647059,
+      "expl_to_correct_jaccard": 0.24242424242424243
+    },
+    {
+      "question_id": "CN_019",
+      "question": "What relationship exists between an application‑layer message and a transport‑layer segment?",
+      "options": {
+        "A": "The segment is a subset of the application‑layer message.",
+        "B": "The segment consists of the application‑layer message plus a transport‑layer header.",
+        "C": "The segment replaces the application‑layer message entirely.",
+        "D": "The segment is unrelated to the application‑layer message."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The transport layer appends header information to the application‑layer message, forming a transport‑layer segment, as detailed on page 53.",
+      "citation_pages": [
+        53
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.8174136877059937,
+      "expl_to_correct_cosine": 0.8734135031700134,
+      "expl_to_question_jaccard": 0.2608695652173913,
+      "expl_to_correct_jaccard": 0.4
+    },
+    {
+      "question_id": "CN_020",
+      "question": "Which service does the transport layer obtain from the link layer to accomplish its end‑to‑end delivery function?",
+      "options": {
+        "A": "Routing of datagrams across multiple networks",
+        "B": "Reliable delivery of frames over a single physical link",
+        "C": "Allocation of IP addresses to hosts",
+        "D": "Encryption of application data"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The link layer provides reliable delivery of frames on a single hop, which the transport layer builds upon for end‑to‑end service, as mentioned on page 51.",
+      "citation_pages": [
+        51
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.6860329508781433,
+      "expl_to_correct_cosine": 0.6687577962875366,
+      "expl_to_question_jaccard": 0.3,
+      "expl_to_correct_jaccard": 0.2692307692307692
+    },
+    {
+      "question_id": "CN_021",
+      "question": "Based on the context, which of the following best explains why UDP was introduced as a separate protocol from TCP?",
+      "options": {
+        "A": "To provide a transport service that includes built‑in flow control for large file transfers.",
+        "B": "To offer an unreliable, non‑flow‑controlled transport suitable for applications like packetized voice.",
+        "C": "To replace TCP’s retransmission mechanism with a more efficient error‑correction algorithm.",
+        "D": "To integrate routing functions directly into the transport layer."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "UDP was created to provide an unreliable, non‑flow‑controlled end‑to‑end transport service for applications such as packetized voice, as noted on page 61.",
+      "citation_pages": [
+        61
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.619720458984375,
+      "expl_to_correct_cosine": 0.7468993663787842,
+      "expl_to_question_jaccard": 0.10526315789473684,
+      "expl_to_correct_jaccard": 0.4230769230769231
+    },
+    {
+      "question_id": "CN_022",
+      "question": "According to the text, how did early versions of TCP differ from the modern TCP described today?",
+      "options": {
+        "A": "Early TCP combined reliable delivery with forwarding functions that are now handled by IP.",
+        "B": "Early TCP lacked any retransmission mechanism for lost packets.",
+        "C": "Early TCP operated only at the physical layer, not the transport layer.",
+        "D": "Early TCP used UDP as its underlying protocol for packet routing."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "The early versions of TCP combined reliable in‑sequence delivery with forwarding functions, which are now performed by IP, as mentioned on page 61.",
+      "citation_pages": [
+        61
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.6169873476028442,
+      "expl_to_correct_cosine": 0.9023110270500183,
+      "expl_to_question_jaccard": 0.14705882352941177,
+      "expl_to_correct_jaccard": 0.46153846153846156
+    },
+    {
+      "question_id": "CN_023",
+      "question": "Which statement correctly differentiates the way TCP and UDP handle data transmission, based on the provided material?",
+      "options": {
+        "A": "TCP guarantees delivery by retransmitting lost segments, while UDP sends datagrams without such guarantees.",
+        "B": "UDP guarantees in‑order delivery, whereas TCP may deliver packets out of order.",
+        "C": "Both TCP and UDP use the same flow‑control mechanisms, but TCP adds encryption.",
+        "D": "UDP implements end‑system retransmission, while TCP relies on network‑layer routing."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "TCP provides reliable in‑sequence delivery via end‑system retransmission, whereas UDP is described as an unreliable, non‑flow‑controlled service (pages 61, 5).",
+      "citation_pages": [
+        5,
+        61
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.6089661121368408,
+      "expl_to_correct_cosine": 0.7893669605255127,
+      "expl_to_question_jaccard": 0.05263157894736842,
+      "expl_to_correct_jaccard": 0.08823529411764706
+    },
+    {
+      "question_id": "CN_024",
+      "question": "Given the historical development described, why might an application that streams live audio prefer UDP over TCP?",
+      "options": {
+        "A": "Because UDP ensures that every packet arrives, preserving audio quality.",
+        "B": "Because UDP’s lack of flow control reduces latency, which is critical for real‑time audio.",
+        "C": "Because UDP automatically corrects errors, eliminating the need for error handling.",
+        "D": "Because UDP encrypts audio data, providing better security than TCP."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "UDP was introduced for applications like packetized voice, where low latency is more important than guaranteed delivery, as indicated on page 61.",
+      "citation_pages": [
+        61
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.6916000843048096,
+      "expl_to_correct_cosine": 0.7446061372756958,
+      "expl_to_question_jaccard": 0.02631578947368421,
+      "expl_to_correct_jaccard": 0.11764705882352941
+    },
+    {
+      "question_id": "CN_025",
+      "question": "How does the role of RFCs, as mentioned in the context, support the existence of both TCP and UDP?",
+      "options": {
+        "A": "RFCs mandate that all transport protocols must be reliable, thus justifying TCP only.",
+        "B": "RFCs provide detailed specifications for each protocol, allowing distinct services like reliable TCP and unreliable UDP.",
+        "C": "RFCs prohibit the use of UDP in any Internet application.",
+        "D": "RFCs define only IP, leaving TCP and UDP undefined."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "RFCs define protocols such as TCP and UDP in detail, enabling them to offer different services (page 5).",
+      "citation_pages": [
+        5
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.8201550245285034,
+      "expl_to_correct_cosine": 0.8437637090682983,
+      "expl_to_question_jaccard": 0.21428571428571427,
+      "expl_to_correct_jaccard": 0.1724137931034483
+    },
+    {
+      "question_id": "CN_026",
+      "question": "Considering the information on page 61, which of the following best characterizes the relationship between IP, TCP, and UDP?",
+      "options": {
+        "A": "IP handles routing, while TCP and UDP provide different transport‑layer services on top of IP.",
+        "B": "TCP includes IP functions, making UDP unnecessary.",
+        "C": "UDP replaces IP for packet switching in modern networks.",
+        "D": "IP provides reliability, whereas TCP and UDP are both unreliable."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Medium",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The text explains that IP is the network‑layer protocol, while TCP and UDP are transport‑layer protocols that operate above IP (pages 5, 61).",
+      "citation_pages": [
+        5,
+        61
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.7614262104034424,
+      "expl_to_correct_cosine": 0.847366452217102,
+      "expl_to_question_jaccard": 0.1875,
+      "expl_to_correct_jaccard": 0.2413793103448276
+    },
+    {
+      "question_id": "CN_027",
+      "question": "An engineer argues that because TCP was originally combined with forwarding functions, UDP is redundant. Based on the context, which rebuttal is most accurate?",
+      "options": {
+        "A": "UDP is redundant because all its features are now part of TCP.",
+        "B": "UDP remains necessary because it offers a lightweight, connectionless service without the overhead of TCP’s reliability mechanisms.",
+        "C": "UDP is only used for file transfers, which TCP cannot handle.",
+        "D": "UDP provides flow control that TCP lacks."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Hard",
+      "feature_derived_difficulty": "Medium",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "UDP was created to provide a simpler, unreliable service for applications where TCP’s reliability is unnecessary, as described on page 61.",
+      "citation_pages": [
+        61
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.6438875198364258,
+      "expl_to_correct_cosine": 0.8047357201576233,
+      "expl_to_question_jaccard": 0.125,
+      "expl_to_correct_jaccard": 0.17647058823529413
+    },
+    {
+      "question_id": "CN_028",
+      "question": "From the passage, what can be inferred about the significance of the year “the end of the 1970s” for transport protocols?",
+      "options": {
+        "A": "It marks the point when TCP was first introduced, eliminating the need for UDP.",
+        "B": "It indicates that TCP, UDP, and IP were conceptually established by that time, forming the core of Internet transport.",
+        "C": "It denotes the year when RFCs were discontinued.",
+        "D": "It signifies the abandonment of IP in favor of a new routing protocol."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "The text states that TCP, UDP, and IP were conceptually in place by the end of the 1970s (page 61).",
+      "citation_pages": [
+        61
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.5609772205352783,
+      "expl_to_correct_cosine": 0.8165066242218018,
+      "expl_to_question_jaccard": 0.13333333333333333,
+      "expl_to_correct_jaccard": 0.38461538461538464
+    },
+    {
+      "question_id": "CN_029",
+      "question": "How does the description of the transport layer on page 51 help clarify why both TCP and UDP are needed?",
+      "options": {
+        "A": "It shows that the transport layer only forwards packets without any segmentation.",
+        "B": "It indicates that the transport layer passes either a TCP segment or a UDP datagram to the network layer, implying distinct services.",
+        "C": "It suggests that only TCP can interact with the network layer, while UDP cannot.",
+        "D": "It reveals that the transport layer encrypts all data before sending."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The passage notes that a transport‑layer segment (TCP) or datagram (UDP) is passed to the network layer, highlighting their distinct roles (page 51).",
+      "citation_pages": [
+        51
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.7210451364517212,
+      "expl_to_correct_cosine": 0.742121696472168,
+      "expl_to_question_jaccard": 0.20588235294117646,
+      "expl_to_correct_jaccard": 0.4642857142857143
+    },
+    {
+      "question_id": "CN_030",
+      "question": "Considering the historical context, why is it important for modern networks to retain both TCP and UDP rather than consolidating into a single transport protocol?",
+      "options": {
+        "A": "Because TCP cannot operate without UDP’s error‑checking features.",
+        "B": "Because some applications require reliable, ordered delivery (TCP) while others prioritize low latency and can tolerate loss (UDP).",
+        "C": "Because UDP provides built‑in encryption required for secure communications.",
+        "D": "Because TCP is only compatible with IPv6, while UDP works only with IPv4."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Hard",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "The text explains that TCP offers reliable delivery, whereas UDP provides an unreliable, non‑flow‑controlled service for latency‑sensitive applications, justifying the need for both (pages 5, 61).",
+      "citation_pages": [
+        5,
+        61
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.589165985584259,
+      "expl_to_correct_cosine": 0.7580325603485107,
+      "expl_to_question_jaccard": 0.10638297872340426,
+      "expl_to_correct_jaccard": 0.15384615384615385
+    },
+    {
+      "question_id": "CN_031",
+      "question": "Considering a 1 Mbps link where each circuit‑switched channel requires 100 kbps, which analysis best explains why packet switching can support more than the 10 simultaneous users that circuit switching allows, given 35 users each active with probability 0.1?",
+      "options": {
+        "A": "Packet switching reserves a fixed 100 kbps per user, so the link can carry up to 35 × 0.1 = 3.5 Mbps.",
+        "B": "Packet switching dynamically shares the link; the chance that more than 10 users are active simultaneously is very low (≈0.0004), so the link can serve many users without reservation.",
+        "C": "Packet switching aggregates traffic into larger frames, effectively increasing the link bandwidth beyond 1 Mbps.",
+        "D": "Packet switching requires each user to be active 100 % of the time, which eliminates contention."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Hard",
+      "explanation": "Packet switching does not allocate a fixed channel; it shares the link and the probability of >10 active users is ≈0.0004, allowing many users to share the same link (Page 30).",
+      "citation_pages": [
+        30
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.7645512819290161,
+      "expl_to_correct_cosine": 0.8547987937927246,
+      "expl_to_question_jaccard": 0.20754716981132076,
+      "expl_to_correct_jaccard": 0.2857142857142857
+    },
+    {
+      "question_id": "CN_032",
+      "question": "Which of the following statements correctly contrasts the resource allocation philosophy of circuit switching versus packet switching as described in the context?",
+      "options": {
+        "A": "Circuit switching assigns bandwidth on demand for each packet, while packet switching reserves a permanent path for the duration of a call.",
+        "B": "Circuit switching guarantees a dedicated 100 kbps channel per user, whereas packet switching treats bandwidth as a statistical resource shared among users.",
+        "C": "Both circuit and packet switching allocate fixed bandwidth per user, but packet switching uses larger packets.",
+        "D": "Packet switching provides a permanent virtual circuit, while circuit switching uses best‑effort delivery."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Medium",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "Circuit switching reserves a fixed channel (10 users on a 1 Mbps link) whereas packet switching relies on statistical multiplexing (Page 30).",
+      "citation_pages": [
+        30
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.6106019616127014,
+      "expl_to_correct_cosine": 0.8595556616783142,
+      "expl_to_question_jaccard": 0.08823529411764706,
+      "expl_to_correct_jaccard": 0.25806451612903225
+    },
+    {
+      "question_id": "CN_033",
+      "question": "Based on the probability analysis provided, which scenario would most likely cause packet switching to perform worse than circuit switching on the same 1 Mbps link?",
+      "options": {
+        "A": "When the number of users increases to 100, each still active with probability 0.1.",
+        "B": "When each user’s activity probability rises to 0.9 while the number of users remains 35.",
+        "C": "When the link capacity is doubled to 2 Mbps but the number of users stays at 35.",
+        "D": "When the link is used exclusively for voice calls that require constant bitrate."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Hard",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "A higher activity probability (0.9) raises the chance of many simultaneous users, increasing contention and making packet switching less reliable than a dedicated circuit (Page 30).",
+      "citation_pages": [
+        30
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.6202777028083801,
+      "expl_to_correct_cosine": 0.5798451900482178,
+      "expl_to_question_jaccard": 0.13953488372093023,
+      "expl_to_correct_jaccard": 0.19444444444444445
+    },
+    {
+      "question_id": "CN_034",
+      "question": "Which analysis best captures the trend described in the text regarding the adoption of switching technologies?",
+      "options": {
+        "A": "Circuit switching is expanding because it offers lower latency for all applications.",
+        "B": "Packet switching is being phased out in favor of circuit‑switched telephone networks.",
+        "C": "Both technologies are declining as new hybrid models replace them.",
+        "D": "The industry is moving toward packet switching, even for traditional telephone networks."
+      },
+      "correct_answer": "D",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "The text notes a clear migration toward packet switching, including in telephone networks (Page 31).",
+      "citation_pages": [
+        31
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.37806737422943115,
+      "expl_to_correct_cosine": 0.7741198539733887,
+      "expl_to_question_jaccard": 0.16,
+      "expl_to_correct_jaccard": 0.2857142857142857
+    },
+    {
+      "question_id": "CN_035",
+      "question": "If a network engineer must guarantee zero packet loss for a voice call, which switching method aligns best with that requirement according to the context, and why?",
+      "options": {
+        "A": "Packet switching, because it statistically multiplexes traffic and reduces collisions.",
+        "B": "Circuit switching, because it reserves a dedicated channel ensuring constant bandwidth.",
+        "C": "Packet switching, because it uses routers that can prioritize voice packets.",
+        "D": "Circuit switching, because it aggregates multiple voice streams into a single high‑capacity link."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "Circuit switching provides a dedicated 100 kbps channel per user, guaranteeing the needed bandwidth (Page 30).",
+      "citation_pages": [
+        30
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.35830968618392944,
+      "expl_to_correct_cosine": 0.7063969373703003,
+      "expl_to_question_jaccard": 0.07692307692307693,
+      "expl_to_correct_jaccard": 0.2857142857142857
+    },
+    {
+      "question_id": "CN_036",
+      "question": "Given the probability that a specific user is active (0.1) and 35 users share a packet‑switched link, which conclusion about link utilization is most accurate?",
+      "options": {
+        "A": "The link will be idle 90 % of the time because most users are inactive.",
+        "B": "The expected number of active users is 3.5, so the link is typically under‑utilized.",
+        "C": "The link will always be fully utilized because the sum of probabilities exceeds 1.",
+        "D": "The link’s utilization cannot be estimated without knowing packet sizes."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Easy",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "Expected active users = 35 × 0.1 = 3.5, indicating low average utilization (Page 30).",
+      "citation_pages": [
+        30
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.5372061729431152,
+      "expl_to_correct_cosine": 0.6591019034385681,
+      "expl_to_question_jaccard": 0.1875,
+      "expl_to_correct_jaccard": 0.21739130434782608
+    },
+    {
+      "question_id": "CN_037",
+      "question": "Which statement correctly analyzes why a circuit‑switched link can only support 10 simultaneous users, while a packet‑switched link can statistically support more, based on the given bandwidth figures?",
+      "options": {
+        "A": "Circuit switching limits users to 10 because each needs 100 kbps, whereas packet switching compresses data to fit more users.",
+        "B": "Circuit switching assigns a fixed 100 kbps per user; packet switching allows users to share the 1 Mbps link dynamically, making the effective capacity higher under typical load.",
+        "C": "Packet switching increases the physical link speed beyond 1 Mbps through multiplexing, unlike circuit switching.",
+        "D": "Circuit switching uses larger frames that occupy more bandwidth, while packet switching uses smaller frames that reduce overhead."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Hard",
+      "explanation": "Fixed allocation yields 10 users; dynamic sharing lets many more users share the link statistically (Page 30).",
+      "citation_pages": [
+        30
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.49832791090011597,
+      "expl_to_correct_cosine": 0.4175944924354553,
+      "expl_to_question_jaccard": 0.17142857142857143,
+      "expl_to_correct_jaccard": 0.13513513513513514
+    },
+    {
+      "question_id": "CN_038",
+      "question": "In a scenario where 35 users each generate bursts of traffic with probability 0.1, which analysis best explains the likelihood of encountering a congestion event on a packet‑switched link versus a circuit‑switched link?",
+      "options": {
+        "A": "Congestion is more likely on the circuit‑switched link because it cannot exceed 10 users.",
+        "B": "Congestion is less likely on the packet‑switched link because the probability of >10 concurrent bursts is only 0.0004.",
+        "C": "Both links have identical congestion probabilities because they share the same physical bandwidth.",
+        "D": "Congestion cannot be compared without knowing the exact packet size distribution."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Hard",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Hard",
+      "explanation": "The probability of 11+ active users is ≈0.0004, indicating low congestion risk for packet switching (Page 30).",
+      "citation_pages": [
+        30
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.6175087690353394,
+      "expl_to_correct_cosine": 0.6178383827209473,
+      "expl_to_question_jaccard": 0.17073170731707318,
+      "expl_to_correct_jaccard": 0.2857142857142857
+    },
+    {
+      "question_id": "CN_039",
+      "question": "Which analytical comparison accurately reflects the impact of switching type on the number of users that can be supported when the link bandwidth is fixed at 1 Mbps?",
+      "options": {
+        "A": "Circuit switching supports more users because it allocates bandwidth dynamically.",
+        "B": "Packet switching supports fewer users because it requires additional header overhead.",
+        "C": "Circuit switching caps users at the integer division of total bandwidth by per‑user bandwidth, while packet switching can exceed that cap through statistical multiplexing.",
+        "D": "Both switching types support the same number of users; the difference lies only in latency."
+      },
+      "correct_answer": "C",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Medium",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "Circuit switching limits users to 10 (1 Mbps / 100 kbps); packet switching can exceed this via statistical multiplexing (Page 30).",
+      "citation_pages": [
+        30
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.5740720629692078,
+      "expl_to_correct_cosine": 0.7685669660568237,
+      "expl_to_question_jaccard": 0.1282051282051282,
+      "expl_to_correct_jaccard": 0.23529411764705882
+    },
+    {
+      "question_id": "CN_040",
+      "question": "Based on the discussion of network core components, which analysis best distinguishes the functional role of a link‑layer switch from that of an IP router in the context of packet switching?",
+      "options": {
+        "A": "A link‑layer switch forwards packets based on IP addresses, while a router forwards based on Ethernet MAC addresses.",
+        "B": "Both devices perform identical functions; the distinction is purely hardware‑level.",
+        "C": "A link‑layer switch forwards frames using layer‑2 (MAC) addresses, whereas a router uses layer‑3 (IP) addresses, reflecting different layers in the network core.",
+        "D": "Routers are only used in circuit‑switched networks, while link‑layer switches are exclusive to packet‑switched networks."
+      },
+      "correct_answer": "C",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "The text notes routers implement IP (layer 3) and switches recognize layer 2 addresses (Page 52).",
+      "citation_pages": [
+        52
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.4673396646976471,
+      "expl_to_correct_cosine": 0.6992161273956299,
+      "expl_to_question_jaccard": 0.07692307692307693,
+      "expl_to_correct_jaccard": 0.1935483870967742
+    },
+    {
+      "question_id": "CN_041",
+      "question": "Which of the following statements best explains why routers must implement layer‑3 functionality in order to forward IP datagrams?",
+      "options": {
+        "A": "Because layer‑3 provides the physical medium for transmitting bits.",
+        "B": "Because layer‑3 defines Ethernet (MAC) addresses used by routers.",
+        "C": "Because layer‑3 contains the IP protocol that supplies source and destination network‑layer addresses required for routing decisions.",
+        "D": "Because layer‑3 supplies the transport‑layer ports that routers use to select paths."
+      },
+      "correct_answer": "C",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Medium",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "Routers implement layers 1‑3, and the network layer (layer 3) carries the IP protocol with source/destination addresses that routing decisions rely on, as stated on pages 51 and 53.",
+      "citation_pages": [
+        51
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.7203257083892822,
+      "expl_to_correct_cosine": 0.7624443173408508,
+      "expl_to_question_jaccard": 0.15,
+      "expl_to_correct_jaccard": 0.41935483870967744
+    },
+    {
+      "question_id": "CN_042",
+      "question": "Given that link‑layer switches implement only layers 1 and 2, which of the following tasks can they perform that routers cannot?",
+      "options": {
+        "A": "Forward packets based on IP address prefixes.",
+        "B": "Recognize and forward frames using Ethernet (MAC) addresses.",
+        "C": "Execute distance‑vector routing updates.",
+        "D": "Perform fragmentation of IP datagrams."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Medium",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The context notes that link‑layer switches recognize layer‑2 addresses such as Ethernet addresses, while they do not implement layer 3 IP functions (pages 53).",
+      "citation_pages": [
+        53
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.5980081558227539,
+      "expl_to_correct_cosine": 0.40024733543395996,
+      "expl_to_question_jaccard": 0.2222222222222222,
+      "expl_to_correct_jaccard": 0.10714285714285714
+    },
+    {
+      "question_id": "CN_043",
+      "question": "When a datagram moves from one node to the next in the Internet, what is the correct order of layer processing at the sending node?",
+      "options": {
+        "A": "Link layer adds its header, then network layer adds its header.",
+        "B": "Network layer adds its header, then link layer adds its header.",
+        "C": "Transport layer adds its header, then link layer adds its header, then network layer adds its header.",
+        "D": "Application layer adds its header, then transport layer adds its header."
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "The network layer passes the datagram down to the link layer, which then adds link‑layer header information before transmission (pages 51, 53).",
+      "citation_pages": [
+        51,
+        53
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.5698742866516113,
+      "expl_to_correct_cosine": 0.7036604285240173,
+      "expl_to_question_jaccard": 0.11428571428571428,
+      "expl_to_correct_jaccard": 0.3157894736842105
+    },
+    {
+      "question_id": "CN_044",
+      "question": "Which of the following best describes the relationship between routing protocols and the network layer as presented in the context?",
+      "options": {
+        "A": "Routing protocols are part of the link layer and handle MAC address learning.",
+        "B": "Routing protocols reside in the transport layer to provide reliable delivery.",
+        "C": "Routing protocols are embedded in the network layer to determine paths for datagrams.",
+        "D": "Routing protocols are application‑layer services that map URLs to IP addresses."
+      },
+      "correct_answer": "C",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Medium",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The Internet’s network layer contains routing protocols that determine the routes that datagrams take (pages 51).",
+      "citation_pages": [
+        51
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.621683657169342,
+      "expl_to_correct_cosine": 0.839303731918335,
+      "expl_to_question_jaccard": 0.18518518518518517,
+      "expl_to_correct_jaccard": 0.3333333333333333
+    },
+    {
+      "question_id": "CN_045",
+      "question": "If a network administrator can run any routing protocol within a network, what does this imply about the design of the Internet’s routing architecture?",
+      "options": {
+        "A": "All networks must use a single, standardized protocol.",
+        "B": "Routing protocols are optional and have no effect on packet delivery.",
+        "C": "The architecture is flexible, allowing different protocols to coexist in different autonomous systems.",
+        "D": "Only link‑layer switches can participate in routing decisions."
+      },
+      "correct_answer": "C",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Medium",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "The context states that within a network the administrator can run any routing protocol desired, indicating flexibility and heterogeneity across networks (page 51).",
+      "citation_pages": [
+        51
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.6936572790145874,
+      "expl_to_correct_cosine": 0.5010840892791748,
+      "expl_to_question_jaccard": 0.30303030303030304,
+      "expl_to_correct_jaccard": 0.030303030303030304
+    },
+    {
+      "question_id": "CN_046",
+      "question": "Considering the analogy that “packets are analogous to trucks” and “packet switches are analogous to intersections,” which network element corresponds to the “intersection” that decides the next direction for a packet?",
+      "options": {
+        "A": "End system (building)",
+        "B": "Link‑layer switch or router (packet switch)",
+        "C": "Transport‑layer segment (truck driver)",
+        "D": "Application‑layer message (cargo)"
+      },
+      "correct_answer": "B",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The analogy maps packet switches (routers or link‑layer switches) to intersections that determine the packet’s path (page 4).",
+      "citation_pages": [
+        4
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.7037336826324463,
+      "expl_to_correct_cosine": 0.5499188899993896,
+      "expl_to_question_jaccard": 0.21212121212121213,
+      "expl_to_correct_jaccard": 0.21052631578947367
+    },
+    {
+      "question_id": "CN_047",
+      "question": "Why does the network layer pass a datagram down to the link layer at each hop rather than sending it directly to the next router’s network layer?",
+      "options": {
+        "A": "Because the link layer is responsible for physical transmission over the local medium.",
+        "B": "Because the network layer cannot encapsulate data.",
+        "C": "Because the transport layer must verify checksums at each hop.",
+        "D": "Because application‑layer protocols manage hop‑by‑hop forwarding."
+      },
+      "correct_answer": "A",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Medium",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "The context explains that the network layer relies on the link layer’s services to move a packet to the next node (pages 51, 53).",
+      "citation_pages": [
+        51,
+        53
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.5561135411262512,
+      "expl_to_correct_cosine": 0.5558244585990906,
+      "expl_to_question_jaccard": 0.23529411764705882,
+      "expl_to_correct_jaccard": 0.10344827586206896
+    },
+    {
+      "question_id": "CN_048",
+      "question": "Which of the following correctly identifies a key difference between routers and link‑layer switches regarding the protocols they can recognize?",
+      "options": {
+        "A": "Routers can recognize Ethernet addresses; link‑layer switches can recognize IP addresses.",
+        "B": "Both can recognize IP addresses, but only routers can process TCP ports.",
+        "C": "Routers can recognize IP addresses (layer 3); link‑layer switches can only recognize Ethernet (layer 2) addresses.",
+        "D": "Neither can recognize any layer‑2 addresses; they both operate only at layer 3."
+      },
+      "correct_answer": "C",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Medium",
+      "explanation": "Routers implement the IP protocol (layer 3) while link‑layer switches recognize only layer‑2 addresses like Ethernet (page 53).",
+      "citation_pages": [
+        53
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.7653969526290894,
+      "expl_to_correct_cosine": 0.875798225402832,
+      "expl_to_question_jaccard": 0.1875,
+      "expl_to_correct_jaccard": 0.5789473684210527
+    },
+    {
+      "question_id": "CN_049",
+      "question": "In the encapsulation process described, which header is added last before the frame is transmitted onto the physical medium?",
+      "options": {
+        "A": "Application‑layer header",
+        "B": "Transport‑layer header",
+        "C": "Network‑layer header",
+        "D": "Link‑layer header"
+      },
+      "correct_answer": "D",
+      "bloom_level": "Understand",
+      "self_reported_difficulty": "Easy",
+      "feature_derived_difficulty": "Hard",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "The network layer adds its header, then the link layer adds its own header, creating the final frame for transmission (pages 51, 53).",
+      "citation_pages": [
+        51,
+        53
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.583761990070343,
+      "expl_to_correct_cosine": 0.6787422299385071,
+      "expl_to_question_jaccard": 0.1,
+      "expl_to_correct_jaccard": 0.17647058823529413
+    },
+    {
+      "question_id": "CN_050",
+      "question": "Based on the description of routing in the context, what is the primary purpose of routing protocols within the network layer?",
+      "options": {
+        "A": "To encrypt datagrams for secure transmission.",
+        "B": "To assign MAC addresses to hosts.",
+        "C": "To determine the sequence of routers (path) that a datagram follows from source to destination.",
+        "D": "To manage end‑to‑end flow control for TCP connections."
+      },
+      "correct_answer": "C",
+      "bloom_level": "Analyze",
+      "self_reported_difficulty": "Medium",
+      "feature_derived_difficulty": "Medium",
+      "llm_response_augmented_difficulty": "Easy",
+      "explanation": "Routing protocols are defined as mechanisms that determine the routes datagrams take between sources and destinations (page 51).",
+      "citation_pages": [
+        51
+      ],
+      "citation_present": true,
+      "expl_to_question_cosine": 0.7442971467971802,
+      "expl_to_correct_cosine": 0.571079671382904,
+      "expl_to_question_jaccard": 0.0967741935483871,
+      "expl_to_correct_jaccard": 0.10344827586206896
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+========================================================================
+TOTAL N = 211
+========================================================================
+subject
+ai                  56
+computernetworks    50
+datamining          55
+softengineering     50
+Name: count, dtype: int64
+
+
+========================================================================
+TABLE V: Feature Profile by Subject (Mean ± SD) + Overall
+========================================================================
+Stem words                    19.00±5.80  19.50±4.98  16.27±3.63  17.56±5.08  | Overall: 18.07±5.06
+Option words                  8.98±4.26  10.22±3.63  9.70±3.18  8.46±3.18  | Overall: 9.34±3.64
+Pairwise Jaccard              0.220±0.178  0.158±0.126  0.142±0.142  0.155±0.108  | Overall: 0.170±0.144
+Distractor similarity         0.235±0.191  0.162±0.135  0.136±0.145  0.170±0.124  | Overall: 0.177±0.156
+Explanation words             26.75±7.65  21.18±4.11  22.49±5.77  23.58±5.83  | Overall: 23.57±6.33
+Expl->Question Jaccard        0.172±0.070  0.159±0.080  0.143±0.055  0.153±0.075  | Overall: 0.157±0.071
+Expl->Correct Jaccard         0.200±0.115  0.221±0.107  0.198±0.091  0.211±0.115  | Overall: 0.207±0.107
+New information ratio         0.589±0.123  0.564±0.124  0.603±0.107  0.591±0.128  | Overall: 0.587±0.121
+Flesch-Kincaid grade          12.67±3.81  12.84±3.25  13.70±3.02  13.10±2.93  | Overall: 13.08±3.28
+Verbatim copy (%)             17.86±38.65  2.00±14.14  3.64±18.89  6.00±23.99  | Overall: 7.58±26.54
+
+========================================================================
+TABLE VII: Bloom's Taxonomy Distribution by Subject (%)
+========================================================================
+bloom_taxonomy_level  Remember  Understand  Apply  Analyze  Evaluate  Create
+subject                                                                     
+ai                           0           0      0        0         0       0
+computernetworks             0           0      0        0         0       0
+datamining                   0           0      0        0         0       0
+softengineering              0           0      0        0         0       0
+
+========================================================================
+TABLE VIII: Correct Answer Position by Subject (%)
+========================================================================
+correct_answer       A     B     C     D
+subject                                 
+ai                25.0  37.5  26.8  10.7
+computernetworks  16.0  62.0  18.0   4.0
+datamining        16.4  70.9   9.1   3.6
+softengineering    6.0  64.0  24.0   6.0
+
+Overall:
+correct_answer
+A    16.1
+B    58.3
+C    19.4
+D     6.2
+Name: proportion, dtype: float64
+
+Chi-square = 57.64, p = 1.88e-12
+
+========================================================================
+TABLE IX + stats: Self-Reported vs Feature-Derived
+========================================================================
+        Easy  Medium  Hard
+Easy      51      36    21
+Medium    18      34    39
+Hard       0       2    10
+
+Accuracy: 45.0% (95/211)
+Cohen's kappa:   0.175
+Weighted kappa:  0.241
+Spearman rho:    0.384  (p = 8.22e-09)
+
+Feature-derived distribution:
+feature_derived_difficulty
+Easy      69
+Medium    72
+Hard      70
+Name: count, dtype: int64
+
+Self-reported distribution:
+self_reported_difficulty
+Easy      108
+Medium     91
+Hard       12
+Name: count, dtype: int64
+
+========================================================================
+TABLE X: Feature Correlations with Feature-Derived Score
+========================================================================
+Stem word count                               +0.625
+Flesch-Kincaid grade                          +0.434
+Avg. distractor Jaccard to correct            +0.418
+New information ratio (explanation)           +0.419
+Avg. option word count                        -0.280
+Explanation word count                        +0.092
+
+========================================================================
+TABLE XI: Summary Stats by Feature-Derived Category
+========================================================================
+
+Easy (n=69):
+  Stem words:     15.03 ± 2.74
+  Distractor sim: 0.127 ± 0.077
+  New info ratio: 0.524 ± 0.112
+
+Medium (n=72):
+  Stem words:     17.57 ± 3.67
+  Distractor sim: 0.141 ± 0.097
+  New info ratio: 0.599 ± 0.104
+
+Hard (n=70):
+  Stem words:     21.57 ± 5.89
+  Distractor sim: 0.263 ± 0.216
+  New info ratio: 0.638 ± 0.118
+
+========================================================================
+TABLE XII: Bloom's Level by Feature-Derived Category (% within)
+========================================================================
+bloom_taxonomy_level        Remember  Understand  ...  Evaluate  Create
+feature_derived_difficulty                        ...                  
+Easy                             0.0         0.0  ...       0.0     0.0
+Medium                           0.0         0.0  ...       0.0     0.0
+Hard                             0.0         0.0  ...       0.0     0.0
+
+[3 rows x 6 columns]
+
+========================================================================
+TABLE XIII + stats: Self-Reported vs LLM-Augmented
+========================================================================
+        Easy  Medium  Hard
+Easy      70      34     4
+Medium    38      44     9
+Hard       1       8     3
+
+Accuracy: 55.5% (116/211)
+Cohen's kappa:   0.198
+Weighted kappa:  0.248
+Spearman rho:    0.308  (p = 4.98e-06)
+
+========================================================================
+TABLE XIV: Per-Subject Agreement
+========================================================================
+         Subject  N  FD_Acc  FD_kappa  LLM_Acc  LLM_kappa
+              ai 56   0.375     0.110    0.679      0.415
+computernetworks 50   0.460     0.199    0.560      0.214
+      datamining 55   0.527     0.253    0.491      0.149
+ softengineering 50   0.440     0.156    0.480      0.095
+
+========================================================================
+Done. Copy these values into the paper tables.
+========================================================================
