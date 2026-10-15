@@ -20,4 +20,6 @@ LOCAL_MODEL = None           # ollama fallback ko lagi —  machine ma jun ollam
 #########################################
 CURRENT_PDF = None  # holds currently loaded pdf 
 
-TAXONOMY_PATH = "/home/sujan/Major-Project/Datasets/Jsons/datamining.json"
+from pathlib import Path
+BASE_DIR = Path(__file__).parent
+TAXONOMY_PATH = BASE_DIR / "Datasets" / "Jsons" / "datamining.json"
